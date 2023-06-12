@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
 export const Login = () => {
-    const [email, set] = useState("hpassfield7@netvibes.com")
+    const [email, set] = useState("athompson@yahoo.com")
     const navigate = useNavigate()
 
     const handleLogin = (e) => {
@@ -15,9 +15,10 @@ export const Login = () => {
             .then(foundUsers => {
                 if (foundUsers.length === 1) {
                     const user = foundUsers[0]
-                    localStorage.setItem("honey_user", JSON.stringify({
+                    localStorage.setItem("tomato_user", JSON.stringify({
                         id: user.id,
-                        staff: user.isStaff
+                        name: user.name,
+                        username: user.username
                     }))
 
                     navigate("/")
@@ -32,7 +33,7 @@ export const Login = () => {
         <main className="container--login">
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Honey Rae Repairs</h1>
+                    <h1>Too Much To Can</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>

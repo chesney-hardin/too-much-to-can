@@ -4,9 +4,10 @@ import "./Login.css"
 
 export const Register = (props) => {
     const [customer, setCustomer] = useState({
+        name: "",
         email: "",
-        fullName: "",
-        isStaff: false
+        password: "",
+        countyId: 0
     })
     let navigate = useNavigate()
 
@@ -21,9 +22,10 @@ export const Register = (props) => {
             .then(res => res.json())
             .then(createdUser => {
                 if (createdUser.hasOwnProperty("id")) {
-                    localStorage.setItem("honey_user", JSON.stringify({
+                    localStorage.setItem("tomato_user", JSON.stringify({
                         id: createdUser.id,
-                        staff: createdUser.isStaff
+                        name: createdUser.name,
+                        username: createdUser.username
                     }))
 
                     navigate("/")
@@ -56,7 +58,7 @@ export const Register = (props) => {
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Honey Rae Repairs</h1>
+                <h1 className="h3 mb-3 font-weight-normal">Please Register for Too Much To Can</h1>
                 <fieldset>
                     <label htmlFor="fullName"> Full Name </label>
                     <input onChange={updateCustomer}
