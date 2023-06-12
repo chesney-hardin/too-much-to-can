@@ -20,7 +20,7 @@ export const PostList = () => {
         {
             posts.map(post => {
                 return <section className="post">
-                    <header>post #{post.id}</header>
+                    <header>{post.title}</header>
                     <img src={post.photoURL} alt="photo of produce"/>
 
                 </section>
