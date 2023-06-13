@@ -7,6 +7,7 @@ import { CreateMessage } from "../Messages/CreateMessage"
 import { Inbox } from "../Messages/Inbox"
 import { YourPosts } from "../Posts/YourPosts"
 import { EditPost } from "../Posts/EditPost"
+import { CreatePost } from "../Posts/CreatePost"
 
 export const ApplicationViews = () => {
 	return <>
@@ -25,6 +26,7 @@ export const ApplicationViews = () => {
 				<Route path="inbox" element={<Inbox />} />
 				<Route path="yourposts" element={<YourPosts/>} />
 				<Route path="editpost/:postId" element={<EditPost/>} />
+				<Route path="createpost" element={<CreatePost />} />
 				<Route path="posts" element={<PostSearchParent />} />
 				<Route path="posts/:postId" element={  <IndividualPost /> } />
 				<Route path="createmessage/:postId" element={<CreateMessage />} />
