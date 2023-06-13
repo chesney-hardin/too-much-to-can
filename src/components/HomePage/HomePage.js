@@ -15,7 +15,7 @@ export const HomePage = () => {
                 <Link className="homepage__link" to="/createpost">MAKE A POST</Link>
             </li>
             <li className="homepage__item active">
-                <Link className="homepage__link" to="/usersposts">YOUR POSTS</Link>
+                <Link className="homepage__link" to="/yourposts">YOUR POSTS</Link>
             </li>
 
     </ul>
