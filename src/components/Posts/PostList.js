@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react"
 import "./PostList.css"
+import { Link, useNavigate } from "react-router-dom"
 
 export const PostList = ({ searchTermState }) => {
     const [posts, setPosts] = useState([])
     const [filteredPosts, setFilteredPosts] = useState([])
+    
+
+    //const navigate = useNavigate()
     
     useEffect(
         () => {
@@ -36,18 +40,21 @@ export const PostList = ({ searchTermState }) => {
         },
         [posts]
     )
+
     
     return <>
     <article className= "posts">
         {
             filteredPosts.map(post => {
                 return <section className="post">
-                    <header>{post.title}</header>
-                    <img src={post.photoURL} alt="photo of produce"/>
-
+                    <Link className="post__link" to={`/posts/${post.id}`}>{post.title}</Link>
+                    <img className="postPhoto" src={post.photoURL} alt="photo of produce"/>
+                    
                 </section>
             } )
         }
     </article>
     </>
 }
+
+//onClick={() => { navigate(`/posts/${post.id}`) }}
