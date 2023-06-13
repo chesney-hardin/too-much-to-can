@@ -1,7 +1,7 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { HomePage } from "../HomePage/HomePage"
 import { ViewProfile } from "../Profile/ViewProfile"
-import { PostList } from "../Posts/PostList"
+import { PostSearchParent } from "../Posts/PostSearchParent"
 
 export const ApplicationViews = () => {
 	return <>
@@ -17,7 +17,7 @@ export const ApplicationViews = () => {
 			}>
 				<Route path="home" element={<HomePage />} />
 				<Route path="profile" element={<ViewProfile />} />
-				<Route path="posts" element={<PostList />} />
+				<Route path="posts" element={<PostSearchParent />} />
 
 
 			</Route>

@@ -1,9 +1,22 @@
 import { useEffect, useState } from "react"
 import "./PostList.css"
 
-export const PostList = () => {
+export const PostList = ({ searchTermState }) => {
     const [posts, setPosts] = useState([])
+    const [filteredPosts, setFilteredPosts] = useState([])
     
+    useEffect(
+        () => {
+            const searchedPosts = posts.filter(post => {
+                return post.description.toLowerCase().includes(searchTermState.toLowerCase())
+                || post.title.toLowerCase().includes(searchTermState.toLowerCase())
+            })
+            setFilteredPosts(searchedPosts)
+        },
+        [searchTermState]
+    )
+
+
     useEffect(
         ()=> {
             fetch("http://localhost:8088/posts")
@@ -14,11 +27,20 @@ export const PostList = () => {
         },
         []
     )
+
+    useEffect(
+        ()=> {
+            if(posts.length !== 0) {
+                setFilteredPosts(posts)
+            }
+        },
+        [posts]
+    )
     
     return <>
     <article className= "posts">
         {
-            posts.map(post => {
+            filteredPosts.map(post => {
                 return <section className="post">
                     <header>{post.title}</header>
                     <img src={post.photoURL} alt="photo of produce"/>
