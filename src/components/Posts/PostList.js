@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
 import "./PostList.css"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export const PostList = ({ searchTermState }) => {
     const [posts, setPosts] = useState([])
     const [filteredPosts, setFilteredPosts] = useState([])
-    
 
-    //const navigate = useNavigate()
+    const currentUser = JSON.parse(localStorage.getItem("tomato_user"))
+    
     
     useEffect(
         () => {
@@ -35,7 +35,10 @@ export const PostList = ({ searchTermState }) => {
     useEffect(
         ()=> {
             if(posts.length !== 0) {
-                setFilteredPosts(posts)
+                const nonUsersPosts = posts.filter(post => {
+                    return post?.userId !== currentUser.id
+                })
+                setFilteredPosts(nonUsersPosts)
             }
         },
         [posts]

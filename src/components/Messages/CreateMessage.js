@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 export const CreateMessage = () => {
     const { postId } = useParams()
@@ -12,6 +12,7 @@ export const CreateMessage = () => {
     })
 
     const currentUser = JSON.parse(localStorage.getItem("tomato_user"))
+    const navigate = useNavigate()
 
     useEffect(
         () => {
@@ -27,6 +28,33 @@ export const CreateMessage = () => {
         },
         [postId]
     )
+
+    const handleSaveButtonClick = (event) => {
+        event.preventDefault()
+
+        // TODO: Create the object to be saved to the API
+        const messageToSendToAPI =
+        {
+            userId: currentUser.id,
+            recipientId: post.user.id,
+            text: message.text,
+            postId: post.id
+        }
+
+
+        // TODO: Perform the fetch() to POST the object to the API
+        return fetch(`http://localhost:8088/messages`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(messageToSendToAPI)
+        })
+            .then(response => response.json())
+            .then(() => {
+                navigate("/inbox")
+            })
+    }
 
     return <form className="messageForm">
 
@@ -91,28 +119,12 @@ export const CreateMessage = () => {
                     }></textarea>
             </div>
         </fieldset>
-        <button>Send</button>
+        <button
+        onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+        className="btn btn-primary"
+        >Send</button>
 
     </form>
 
 }
 
-/* <fieldset>
-        <div className="form-group">
-            <label htmlFor="name">Emergency:</label>
-            <input type="checkbox"
-                value={ticket.emergency}
-                onChange={
-                    (evt) => {
-                        const copy = { ...ticket }
-                        copy.emergency = evt.target.checked
-                        assignTicket(copy)
-                    }
-                } />
-        </div>
-    </fieldset>
-    <button
-        onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-        className="btn btn-primary">
-        Save Edits
-    </button> */

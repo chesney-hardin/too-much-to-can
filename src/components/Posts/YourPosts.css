@@ -1,0 +1,15 @@
+.editPostIcon, .deletePostIcon {
+    width: 10%;
+    height: auto;
+    padding: 4px;
+}
+
+.editPostIcon:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.deletePostIcon:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
