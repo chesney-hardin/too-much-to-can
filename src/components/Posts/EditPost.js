@@ -41,8 +41,8 @@ export const EditPost = () => {
             if (postId) {
                 fetch(`http://localhost:8088/posts?id=${postId}`)
                     .then(response => response.json())
-                    .then((postObject) => {
-                        const postToEdit = postObject[0]
+                    .then((postArray) => {
+                        const postToEdit = postArray[0]
                         setUpdatedPost(postToEdit)
                     })
             }
@@ -69,7 +69,7 @@ export const EditPost = () => {
             })
     }
 
-    return <form className="messageForm">
+    return <form className="editPostForm">
 
         <fieldset>
             <div className="form-group">
@@ -122,7 +122,7 @@ export const EditPost = () => {
                             setUpdatedPost(copy)
                         }
                     } >
-                    <option value="0">Select Crop Type</option>
+                    <option value="0">Select County</option>
                     {counties.map((county) =>
                         <option key={`county--${county.id}`} value={county.id}>{county.name}</option>
                     )}
