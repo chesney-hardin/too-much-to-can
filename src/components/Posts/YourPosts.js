@@ -44,7 +44,7 @@ export const YourPosts = () => {
         <article className="posts">
             {
                 posts.map(post => {
-                    return <section className="post">
+                    return <section className="post" key={`post--${post.id}`}>
                         <Link className="post__link" to={`/posts/${post.id}`}>{post.title}</Link>
                         <img className="postPhoto" src={post.photoURL} alt="photo of produce" />
                         <img className="editPostIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.1yUH3mIs0Em_iY6RkTztzAHaHa%26pid%3DApi&f=1&ipt=42e7e1566b75a8ce3647acfa4b1c8da58776f3787cb14d35d6f7cc3d857442a7&ipo=images" alt="edit post"

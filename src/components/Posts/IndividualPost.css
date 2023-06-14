@@ -2,3 +2,8 @@
     width: 12%;
     height: auto;
 }
+
+.sendMessageIcon:hover{
+    cursor: pointer;
+    opacity: 70%;
+}

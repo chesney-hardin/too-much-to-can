@@ -13,3 +13,12 @@
     margin-left: auto;
 }
 
+.tomatoLogo {
+    width: 60px;
+    height: auto;
+}
+
+.tomatoLogo:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
