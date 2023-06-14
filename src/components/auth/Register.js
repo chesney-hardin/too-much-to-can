@@ -1,15 +1,28 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
-export const Register = (props) => {
+export const Register = () => {
     const [customer, setCustomer] = useState({
         name: "",
         email: "",
         password: "",
-        countyId: 0
+        countyId: 0,
+        username: ""
     })
+    const [counties, setCounties] = useState([])
     let navigate = useNavigate()
+
+    useEffect(
+        () => {
+            fetch("http://localhost:8088/counties")
+                .then(response => response.json())
+                .then((countiesArray) => {
+                    setCounties(countiesArray)
+                })
+        },
+        []
+    )
 
     const registerNewUser = () => {
         return fetch("http://localhost:8088/users", {
@@ -28,7 +41,7 @@ export const Register = (props) => {
                         username: createdUser.username
                     }))
 
-                    navigate("/")
+                    navigate("/home")
                 }
             })
     }
@@ -50,7 +63,7 @@ export const Register = (props) => {
     }
 
     const updateCustomer = (evt) => {
-        const copy = {...customer}
+        const copy = { ...customer }
         copy[evt.target.id] = evt.target.value
         setCustomer(copy)
     }
@@ -62,8 +75,8 @@ export const Register = (props) => {
                 <fieldset>
                     <label htmlFor="fullName"> Full Name </label>
                     <input onChange={updateCustomer}
-                           type="text" id="fullName" className="form-control"
-                           placeholder="Enter your name" required autoFocus />
+                        type="text" id="name" className="form-control"
+                        placeholder="Enter your name" required autoFocus />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="email"> Email address </label>
@@ -72,14 +85,36 @@ export const Register = (props) => {
                         placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
-                    <input onChange={(evt) => {
-                        const copy = {...customer}
-                        copy.isStaff = evt.target.checked
-                        setCustomer(copy)
-                    }}
-                        type="checkbox" id="isStaff" />
-                    <label htmlFor="email"> I am an employee </label>
+                    <label htmlFor="username"> Username </label>
+                    <input onChange={updateCustomer}
+                        type="text" id="username" className="form-control"
+                        placeholder="username" required />
                 </fieldset>
+                <fieldset>
+                    <label htmlFor="password"> Password </label>
+                    <input onChange={updateCustomer}
+                        type="password" id="password" className="form-control"
+                        placeholder="Password" required />
+                </fieldset>
+                <fieldset>
+                    <div className="form-group">
+                        <label htmlFor="counties">County:</label>
+                        <select 
+                            id="countyId"
+                            onChange={(evt) => {
+                                const copy = { ...customer }
+                                copy.countyId = JSON.parse(evt.target.value)
+                                setCustomer(copy)
+                            }} >
+                            <option value="0">Select County</option>
+                            {counties.map((county) =>
+                                <option key={`county--${county.id}`} value={county.id}>{county.name}</option>
+                            )}
+
+                        </select>
+                    </div>
+                </fieldset>
+
                 <fieldset>
                     <button type="submit"> Register </button>
                 </fieldset>

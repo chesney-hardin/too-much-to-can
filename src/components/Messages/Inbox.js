@@ -4,8 +4,7 @@ import "./Inbox.css"
 
 export const Inbox = () => {
     const[messages, setMessages] = useState([])
-    
-    //const[filteredMessages, setFilteredMessages] = useState([])
+    const[sortedMessages, setSortedMessages] = useState([])
 
     const currentUser = JSON.parse(localStorage.getItem("tomato_user"))
     const navigate = useNavigate()
@@ -21,9 +20,19 @@ export const Inbox = () => {
         []
     )
 
+    useEffect(
+        ()=> {
+            if(messages.lenght !== 0) {
+                const newestMessagesFirst= messages.sort((a, b) => b.id - a.id)
+                setSortedMessages(newestMessagesFirst)
+            }
+        },
+        [messages]
+    )
+
     return <article className="messages">
         {
-            messages.map(message => {
+            sortedMessages.map(message => {
                 return <section key={`message--${message.id}`} className="message">
                     <div>From: {message?.user?.username}</div>
                     <div>Post Title: {message?.post?.title}</div>
