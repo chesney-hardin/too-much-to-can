@@ -1,0 +1,38 @@
+.homepage__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: 50px;
+  
+  }
+  
+  .homepage__item {
+    border: 1px solid #ccc;
+    background-color: darkslategray;
+    margin: 10px;
+    border-radius: 8%;
+    padding: 5px 20px;
+    box-shadow: 0 0 3px whitesmoke;
+  }
+  
+  .homepage__link {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: whitesmoke;
+    background-color: ;
+  }
+  
+  .homepage__link:hover {
+    opacity: 70%;
+    cursor: pointer;
+    transform: scale(1.2)
+  }
+
+  h3{
+    text-align: center;
+  }
+  
