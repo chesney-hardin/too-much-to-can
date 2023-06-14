@@ -111,7 +111,7 @@ export const CreatePost = () => {
                             setPost(copy)
                         }
                     } >
-                    <option value="0">Select Crop Type</option>
+                    <option value="0">Select County</option>
                     {counties.map((county) =>
                         <option key={`county--${county.id}`} value={county.id}>{county.name}</option>
                     )}

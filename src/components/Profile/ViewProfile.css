@@ -1,0 +1,10 @@
+.editProfileIcon{
+    width: 6%;
+    height: auto;
+    padding: 4px;
+}
+
+.editProfileIcon:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
