@@ -49,7 +49,7 @@ export const PostList = ({ searchTermState }) => {
     <article className= "posts">
         {
             filteredPosts.map(post => {
-                return <section className="post">
+                return <section className="post" key={`post--${post.id}`}>
                     <Link className="post__link" to={`/posts/${post.id}`}>{post.title}</Link>
                     <img className="postPhoto" src={post.photoURL} alt="photo of produce"/>
                     

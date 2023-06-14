@@ -33,6 +33,8 @@ export const CreatePost = () => {
                 .then((cropTypesArray) => {
                     setCropTypes(cropTypesArray)
                 })
+
+
         },
         []
     )
@@ -41,28 +43,13 @@ export const CreatePost = () => {
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
-        // TODO: Create the object to be saved to the API
-        const postToSendToAPI =
-        {
-            countyId: 0,
-            dateAvailableTil: "",
-            dateCreated: "",
-            trade: false,
-            userId: currentUser.id,
-            description: "",
-            photoURL: "",
-            cropTypeId: 0,
-            title: ""
-        }
-
-
         // TODO: Perform the fetch() to POST the object to the API
         return fetch(`http://localhost:8088/posts`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(postToSendToAPI)
+            body: JSON.stringify(post)
         })
             .then(response => response.json())
             .then(() => {
@@ -88,9 +75,48 @@ export const CreatePost = () => {
                         (evt) => {
                             const copy = { ...post }
                             copy.title = evt.target.value
+                            copy.userId = currentUser.id
                             setPost(copy)
                         }
                     } />
+            </div>
+        </fieldset>
+        <fieldset>
+            <div className="form-group">
+                <label htmlFor="cropType">"Crop" Type:</label>
+                <select value={post.cropTypeId}
+                    onChange={
+                        (evt) => {
+                            const copy = { ...post }
+                            copy.cropTypeId = JSON.parse(evt.target.value)
+                            setPost(copy)
+                        }
+                    } >
+                    <option value="0">Select Crop Type</option>
+                    {cropTypes.map((cropType) =>
+                        <option key={`cropType--${cropType.id}`} value={cropType.id}>{cropType.name}</option>
+                    )}
+
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div className="form-group">
+                <label htmlFor="counties">County:</label>
+                <select value={post.countyId}
+                    onChange={
+                        (evt) => {
+                            const copy = { ...post }
+                            copy.countyId = JSON.parse(evt.target.value)
+                            setPost(copy)
+                        }
+                    } >
+                    <option value="0">Select Crop Type</option>
+                    {counties.map((county) =>
+                        <option key={`county--${county.id}`} value={county.id}>{county.name}</option>
+                    )}
+
+                </select>
             </div>
         </fieldset>
         <fieldset>
@@ -135,6 +161,27 @@ export const CreatePost = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
+                <label htmlFor="photo">Photo:</label>
+                <input
+                    required autoFocus
+                    type="text"
+                    style={{
+                        height: "2rem"
+                    }}
+                    className="form-control"
+                    placeholder="Link to a photo of your goodies..."
+                    value={post.photoURL}
+                    onChange={
+                        (evt) => {
+                            const copy = { ...post }
+                            copy.photoURL = evt.target.value
+                            setPost(copy)
+                        }
+                    } />
+            </div>
+        </fieldset>
+        <fieldset>
+            <div className="form-group">
                 <label htmlFor="name">Looking to Trade?</label>
                 <input type="checkbox"
                     value={post.trade}
@@ -166,65 +213,6 @@ export const CreatePost = () => {
                             setPost(copy)
                         }
                     } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="photo">Photo:</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    style={{
-                        height: "2rem"
-                    }}
-                    className="form-control"
-                    placeholder="Link to a photo of your goodies..."
-                    value={post.photoURL}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.photoURL = evt.target.value
-                            setPost(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="cropType">"Crop" Type:</label>
-                <select value={post.cropTypeId}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.cropTypeId = JSON.parse(evt.target.value)
-                            setPost(copy)
-                        }
-                    } >
-                    <option value="0">Select Crop Type</option>
-                    {cropTypes.map((cropType) =>
-                        <option value={cropType.id}>{cropType.name}</option>
-                    )}
-
-                </select>
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="counties">County:</label>
-                <select value={post.countyId}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.countyId = JSON.parse(evt.target.value)
-                            setPost(copy)
-                        }
-                    } >
-                    <option value="0">Select Crop Type</option>
-                    {counties.map((county) =>
-                        <option value={county.id}>{county.name}</option>
-                    )}
-
-                </select>
             </div>
         </fieldset>
         <button
