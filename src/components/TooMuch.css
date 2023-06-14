@@ -29,5 +29,7 @@ p {
 
 .title--main {
   margin-block-end: 0;
+  text-align: center;
+  color: darkred;
 }
 
