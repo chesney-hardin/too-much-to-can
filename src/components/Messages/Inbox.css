@@ -1,0 +1,10 @@
+.sendMessageIcon {
+    width: 50px;
+    height: auto;
+    padding: 4px;
+}
+
+.sendMessageIcon:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
