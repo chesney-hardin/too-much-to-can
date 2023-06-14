@@ -9,6 +9,7 @@ import { YourPosts } from "../Posts/YourPosts"
 import { EditPost } from "../Posts/EditPost"
 import { CreatePost } from "../Posts/CreatePost"
 import { EditProfile } from "../Profile/EditProfile"
+import { ReplyMessage } from "../Messages/ReplyMessage"
 
 export const ApplicationViews = () => {
 	return <>
@@ -32,6 +33,7 @@ export const ApplicationViews = () => {
 				<Route path="posts" element={<PostSearchParent />} />
 				<Route path="posts/:postId" element={  <IndividualPost /> } />
 				<Route path="createmessage/:postId" element={<CreateMessage />} />
+				<Route path="replymessage/:messageId" element={<ReplyMessage />} />
 
 
 			</Route>

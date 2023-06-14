@@ -4,11 +4,11 @@ import { useNavigate, useParams } from "react-router-dom"
 export const CreateMessage = () => {
     const { postId } = useParams()
     const [post, setPost] = useState({})
-    const [message, setMessage]=useState({
-            senderId: 0,
-            recipientId: 0,
-            text: "",
-            postId: 0
+    const [message, setMessage] = useState({
+        userId: 0,
+        recipientId: 0,
+        text: "",
+        postId: 0
     })
 
     const currentUser = JSON.parse(localStorage.getItem("tomato_user"))
@@ -19,8 +19,8 @@ export const CreateMessage = () => {
             if (postId) {
                 fetch(`http://localhost:8088/posts?id=${postId}&_expand=county&_expand=cropType&_expand=user`)
                     .then(response => response.json())
-                    .then((postObject) => {
-                        const postToReply = postObject[0]
+                    .then((postArray) => {
+                        const postToReply = postArray[0]
                         setPost(postToReply)
                     })
             }
@@ -120,8 +120,8 @@ export const CreateMessage = () => {
             </div>
         </fieldset>
         <button
-        onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-        className="btn btn-primary"
+            onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+            className="btn btn-primary"
         >Send</button>
 
     </form>
