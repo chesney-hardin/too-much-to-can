@@ -7,3 +7,33 @@
     cursor: pointer;
     opacity: 70%;
 }
+
+.individual--post{
+    margin: 50px;
+    border: 2px solid darkseagreen;
+    border-radius: 10%;
+    box-shadow: 0 0 3px darkolivegreen;
+    padding: 35px;
+    background-color: whitesmoke;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.individual--postPhoto{
+    width: 80%;
+    height: auto;
+    align-self: center;
+}
+
+.individual--postHeader{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 2px darkolivegreen;
+}

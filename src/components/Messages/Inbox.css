@@ -1,10 +1,61 @@
-.sendMessageIcon {
-    width: 50px;
+.sendMessageIcon, .deleteMessageIcon {
+    width: 6%;
     height: auto;
-    padding: 4px;
+    padding: -8px;
+    border-radius: 10%;
+    margin: 5px;
 }
 
 .sendMessageIcon:hover{
     cursor: pointer;
     opacity: 70%;
+}
+
+.deleteMessageIcon:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.message{
+    max-width: 300px;
+    margin: 10px;
+    border: 2px solid darkseagreen;
+    border-radius: 5%;
+    box-shadow: 0 0 3px darkolivegreen;
+    padding: 8px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.message--div {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.message--response{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.message--header {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }

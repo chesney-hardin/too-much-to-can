@@ -37,9 +37,9 @@ export const IndividualPost = () => {
     )
 
     return <>
-        <section className="post">
-            <header>{post?.title}</header>
-            <img className="postPhoto" src={post?.photoURL} alt="photo of produce" />
+        <section className="individual--post">
+            <header className="individual--postHeader">{post?.title}</header>
+            <img className="individual--postPhoto" src={post?.photoURL} alt="photo of produce" />
             <ul>
                 <li>County: {post?.county?.name}</li>
                 <li>Pick Up Before: {post?.dateAvailableTil}</li>
@@ -48,16 +48,16 @@ export const IndividualPost = () => {
                     post?.trade
                         ? `Looking to trade`
                         : `Available to anyone- no trade necessary`
-                    }</li>
+                }</li>
                 <li>Description: {post?.description}</li>
             </ul>
             {
                 post?.userId !== currentUser.id
-                   ? <img className="sendMessageIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F361-3618042_transparent-envelope-icon-png-circle-email-logo-png.png&f=1&nofb=1&ipt=9512d26463a4b5eb6ce48a981247c36a3e6a3d7284d6c1454f4a2feaed53bbc6&ipo=images" alt="send message"
-                onClick={() => { navigate(`/createmessage/${post.id}`) }} />
-                : ""
+                    ? <img className="sendMessageIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F361-3618042_transparent-envelope-icon-png-circle-email-logo-png.png&f=1&nofb=1&ipt=9512d26463a4b5eb6ce48a981247c36a3e6a3d7284d6c1454f4a2feaed53bbc6&ipo=images" alt="send message"
+                        onClick={() => { navigate(`/createmessage/${post.id}`) }} />
+                    : ""
             }
-            </section></>
-             
+        </section></>
+
 }
  // Add onClick={} to send message icon to route to create a message page
