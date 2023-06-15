@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { NavBar } from "../nav/NavBar"
+
 
 export const EditProfile = () => {
     const currentUser = JSON.parse(localStorage.getItem("tomato_user"))
@@ -60,7 +60,7 @@ export const EditProfile = () => {
         <form className="editProfileForm">
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="name">Name:</label>
+                    <label>Name:</label>
                     <input
                         required autoFocus
                         type="text"
@@ -81,7 +81,7 @@ export const EditProfile = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="email">Email:</label>
+                    <label>Email:</label>
                     <input
                         required autoFocus
                         type="text"
@@ -102,7 +102,7 @@ export const EditProfile = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="password">Password:</label>
+                    <label>Password:</label>
                     <input
                         required autoFocus
                         type="text"
@@ -123,7 +123,7 @@ export const EditProfile = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="username">Username:</label>
+                    <label>Username:</label>
                     <input
                         required autoFocus
                         type="text"
@@ -144,7 +144,7 @@ export const EditProfile = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="counties">County:</label>
+                    <label>County:</label>
                     <select value={user.countyId}
                         onChange={
                             (evt) => {

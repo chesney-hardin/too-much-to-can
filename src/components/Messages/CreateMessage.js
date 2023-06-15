@@ -60,7 +60,7 @@ export const CreateMessage = () => {
 
         <fieldset>
             <div className="form-group">
-                <label htmlFor="recipient">To:</label>
+                <label>To:</label>
                 <textarea
                     required autoFocus
                     type="text"
@@ -80,7 +80,7 @@ export const CreateMessage = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="postTitle">Post Title:</label>
+                <label>Post Title:</label>
                 <textarea
                     required autoFocus
                     type="text"
@@ -100,7 +100,7 @@ export const CreateMessage = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="message">Message:</label>
+                <label>Message:</label>
                 <textarea
                     required autoFocus
                     type="text"

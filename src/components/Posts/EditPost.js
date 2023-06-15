@@ -152,7 +152,7 @@ export const EditPost = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="dateCreated">Today's Date:</label>
+                <label>Today's Date:</label>
                 <input
                     required autoFocus
                     type="date"
@@ -172,7 +172,7 @@ export const EditPost = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="photo">Photo:</label>
+                <label>Photo:</label>
                 <input
                     required autoFocus
                     type="text"
@@ -193,7 +193,7 @@ export const EditPost = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="name">Looking to Trade?</label>
+                <label>Looking to Trade?</label>
                 <input type="checkbox"
                     value={updatedPost.trade}
                     onChange={
@@ -207,7 +207,7 @@ export const EditPost = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="description">Description:</label>
+                <label>Description:</label>
                 <input
                     required autoFocus
                     type="text"

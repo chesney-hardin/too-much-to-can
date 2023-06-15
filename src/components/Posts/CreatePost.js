@@ -161,7 +161,7 @@ export const CreatePost = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="photo">Photo:</label>
+                <label>Photo:</label>
                 <input
                     required autoFocus
                     type="text"
@@ -182,7 +182,7 @@ export const CreatePost = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="name">Looking to Trade?</label>
+                <label>Looking to Trade?</label>
                 <input type="checkbox"
                     value={post.trade}
                     onChange={
@@ -196,7 +196,7 @@ export const CreatePost = () => {
         </fieldset>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="description">Description:</label>
+                <label>Description:</label>
                 <input
                     required autoFocus
                     type="text"

@@ -69,7 +69,7 @@ export const ReplyMessage = () => {
     <form>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="message">Reply:</label>
+                <label>Reply:</label>
                 <textarea
                     required autoFocus
                     type="text"
