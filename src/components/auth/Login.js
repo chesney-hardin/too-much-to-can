@@ -37,7 +37,7 @@ export const Login = () => {
                     <h1>Too Much To Can</h1>
                     <h2>Please sign in</h2>
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
+                        <label> Email address </label>
                         <input type="email"
                             value={email}
                             onChange={evt => set(evt.target.value)}
@@ -46,7 +46,7 @@ export const Login = () => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="inputPassword"> Password</label>
+                        <label> Password</label>
                         <input type="password"
                             value={password}
                             onChange={evt => setPassword(evt.target.value)}

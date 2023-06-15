@@ -73,32 +73,32 @@ export const Register = () => {
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Too Much To Can</h1>
                 <fieldset>
-                    <label htmlFor="fullName"> Full Name </label>
+                    <label> Full Name </label>
                     <input onChange={updateCustomer}
                         type="text" id="name" className="form-control"
                         placeholder="Enter your name" required autoFocus />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="email"> Email address </label>
+                    <label> Email address </label>
                     <input onChange={updateCustomer}
                         type="email" id="email" className="form-control"
                         placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="username"> Username </label>
+                    <label> Username </label>
                     <input onChange={updateCustomer}
                         type="text" id="username" className="form-control"
                         placeholder="username" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="password"> Password </label>
+                    <label> Password </label>
                     <input onChange={updateCustomer}
                         type="password" id="password" className="form-control"
                         placeholder="Password" required />
                 </fieldset>
                 <fieldset>
                     <div className="form-group">
-                        <label htmlFor="counties">County:</label>
+                        <label>County:</label>
                         <select 
                             id="countyId"
                             onChange={(evt) => {
