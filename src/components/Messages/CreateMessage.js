@@ -52,7 +52,7 @@ export const CreateMessage = () => {
         })
             .then(response => response.json())
             .then(() => {
-                navigate("/inbox")
+                navigate("/home")
             })
     }
 

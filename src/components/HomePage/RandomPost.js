@@ -38,7 +38,7 @@ export const RandomPost = () => {
         {
             randomPost.id ?
                 <section className="randomPost" key={`randomPost--${randomPost?.id}`}>
-                    <Link className="randomPost__link" to={`/randomPosts/${randomPost?.id}`}>{randomPost?.title}</Link>
+                    <Link className="randomPost__link" to={`/posts/${randomPost?.id}`}>{randomPost?.title}</Link>
                     <img className="randomPostPhoto" src={randomPost.photoURL} alt="photo of produce" />
                 </section>
                 : null
