@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: left;
+    justify-content: space-between;
 }
 
 .navbar__item {
@@ -21,4 +21,8 @@
 .tomatoLogo:hover{
     cursor: pointer;
     opacity: 70%;
+}
+
+.navbar__list{
+
 }

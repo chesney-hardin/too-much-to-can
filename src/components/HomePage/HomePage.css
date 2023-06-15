@@ -23,7 +23,7 @@
     text-decoration: none;
     font-weight: bold;
     color: whitesmoke;
-    background-color: ;
+  
   }
   
   .homepage__link:hover {
@@ -32,7 +32,7 @@
     transform: scale(1.2)
   }
 
-  h3{
+  .subtitle{
     text-align: center;
   }
   
