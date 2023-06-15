@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { NavBar } from "../nav/NavBar"
 
 export const EditProfile = () => {
     const currentUser = JSON.parse(localStorage.getItem("tomato_user"))
@@ -42,6 +43,13 @@ export const EditProfile = () => {
             body: JSON.stringify(user)
         })
             .then(response => response.json())
+            .then((user) => {
+                localStorage.setItem("tomato_user", JSON.stringify({
+                    id: user.id,
+                    name: user.name,
+                    username: user.username
+                }))
+            })
             .then(() => {
                 navigate("/profile")
             })

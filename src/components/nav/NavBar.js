@@ -1,10 +1,11 @@
 import { Link, useNavigate } from "react-router-dom"
 import "./NavBar.css"
+import { useEffect } from "react"
 
 export const NavBar = () => {
     const navigate = useNavigate()
 
-    const currentUser = JSON.parse(localStorage.getItem("tomato_user"))
+    let currentUser = JSON.parse(localStorage.getItem("tomato_user"))
     //const kandyUserObject = JSON.parse(localKandyUser)
 
 

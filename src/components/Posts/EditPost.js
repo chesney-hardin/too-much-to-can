@@ -229,7 +229,7 @@ export const EditPost = () => {
         <button
             onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
             className="btn btn-primary"
-        >Send</button>
+        >Save</button>
 
     </form>
 
