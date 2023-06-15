@@ -1,12 +1,12 @@
-.sendMessageIcon, .deleteMessageIcon {
-    width: 6%;
+.replyMessageIcon, .deleteMessageIcon {
+    width: 3%;
     height: auto;
     padding: -8px;
     border-radius: 10%;
     margin: 5px;
 }
 
-.sendMessageIcon:hover{
+.replyMessageIcon:hover{
     cursor: pointer;
     opacity: 70%;
 }
@@ -17,10 +17,10 @@
 }
 
 .message{
-    max-width: 300px;
+    width: 85%;
     margin: 10px;
     border: 2px solid darkseagreen;
-    border-radius: 5%;
+    border-radius: 4%;
     box-shadow: 0 0 3px darkolivegreen;
     padding: 8px;
     background-color: whitesmoke;
@@ -31,7 +31,8 @@
 .messages{
     display: flex;
     flex-direction: column;
-
+    margin-top: 100px;
+    align-items: center;
 }
 
 .message--div {
@@ -41,7 +42,7 @@
     justify-content: flex-start;
 }
 
-.message--response{
+.message--response, .postTitle__link{
     display: block;
     font-size: 1.17em;
     margin-block-start: 1em;

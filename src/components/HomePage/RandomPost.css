@@ -1,5 +1,5 @@
 .randomPost {
-    margin: 10px;
+    margin: 5px 10px;
     border: 2px solid darkseagreen;
     border-radius: 10%;
     box-shadow: 0 0 3px darkolivegreen;
@@ -18,7 +18,7 @@
     width: 85%;
     height: auto;
     border-radius: 5%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .randomPost__link {

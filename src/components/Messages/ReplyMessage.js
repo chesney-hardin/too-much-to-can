@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 
 export const ReplyMessage = () => {
     const { messageId } = useParams()
@@ -59,7 +59,9 @@ export const ReplyMessage = () => {
     return <>
         <section className="receivedMessage">
             <div>From: {receivedMessage?.user?.username}</div>
-            <div>Post Title: {receivedMessage?.post?.title}</div>
+            <div>Post Title:
+            <Link className="postTitle__link" to={`/posts/${receivedMessage?.post?.id}`}>{receivedMessage?.post?.title}</Link>
+            </div>
             <div>Message: {receivedMessage?.text}</div>
         </section>
 
