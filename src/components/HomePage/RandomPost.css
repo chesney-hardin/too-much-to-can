@@ -1,25 +1,27 @@
-.post {
+.randomPost {
     margin: 10px;
     border: 2px solid darkseagreen;
     border-radius: 10%;
     box-shadow: 0 0 3px darkolivegreen;
-    padding: 8px;
+    padding: 30px;
     background-color: whitesmoke;
     height: auto;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.post header {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
 
-.postPhoto {
-    width: 100%;
+.randomPostPhoto {
+    width: 85%;
     height: auto;
     border-radius: 5%;
+    margin-top: 20px;
 }
 
-.post__link {
+.randomPost__link {
     display: block;
     font-size: 1.17em;
     margin-block-start: 1em;
@@ -32,13 +34,7 @@
     text-shadow: 0 0 2px darkolivegreen;
 }
 
-.post__link:hover {
+.randomPost__link:hover {
     cursor: pointer;
     opacity: 70%;
 }
-
-   .posts{
-    display: grid;
-  grid-template-columns: repeat(3, 1fr);
-   }
-  

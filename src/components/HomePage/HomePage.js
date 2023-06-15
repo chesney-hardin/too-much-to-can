@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom"
 import "./HomePage.css"
+import { RandomPost } from "./RandomPost"
 
 export const HomePage = () => {
-    return <>
+    return <section className="homepage">
         <h3 className="subtitle">Trade your backyard treats with other<br />home gardeners all across Middle Tennessee</h3>
         <ul className="homepage__links">
             <li className="homepage__item active">
@@ -19,5 +20,9 @@ export const HomePage = () => {
             </li>
 
         </ul>
-    </>
+
+        <div className="randomPost--function">
+            <RandomPost />
+        </div>
+    </section>
 }
