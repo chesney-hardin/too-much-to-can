@@ -8,7 +8,6 @@ export const NavBar = () => {
     let currentUser = JSON.parse(localStorage.getItem("tomato_user"))
     //const kandyUserObject = JSON.parse(localKandyUser)
 
-
     return (
         <ul className="navbar">
             <li className="navbar__item active">
@@ -19,8 +18,9 @@ export const NavBar = () => {
             TOO MUCH TO CAN
           </li> */}
             <li className="navbar__item active navbar__list">
-                <Link className="navbar__link" to="/inbox">Inbox</Link> <br />
                 <Link className="navbar__link" to="/profile">{currentUser.username}</Link> <br />
+                <Link className="navbar__link" to="/inbox">Inbox</Link> <br />
+                
                 {
                     localStorage.getItem("tomato_user")
                         ?
@@ -36,4 +36,3 @@ export const NavBar = () => {
     )
 }
 
-//<Link className="navbar__link" to="/home">Logo</Link>

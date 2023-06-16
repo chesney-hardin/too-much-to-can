@@ -216,7 +216,7 @@ export const CreatePost = () => {
             </div>
         </fieldset>
         <button
-            onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+            onClick={handleSaveButtonClick}
             className="btn btn-primary"
         >Send</button>
 
