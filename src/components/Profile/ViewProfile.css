@@ -1,10 +1,62 @@
 .editProfileIcon{
-    width: 6%;
+    width: 4%;
     height: auto;
-    padding: 4px;
+    border-radius: 15%;
+    align-self:flex-end;
 }
 
 .editProfileIcon:hover{
     cursor: pointer;
     opacity: 70%;
 }
+
+
+.editProfileIcon:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.profile{
+    width: 85%;
+    margin: 10px;
+    border: 2px solid darkseagreen;
+    border-radius: 4%;
+    box-shadow: 0 0 3px darkolivegreen;
+    padding: 20px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.profile--listItem{
+    display: flex;
+    align-items: center;
+    
+}
+
+.profile--header {
+    margin: 5px 10px;
+}
+
+.profile--list {
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+/*
+Styling for profile photo...
+.profilePhoto {
+    width: 30%;
+    height: auto;
+    border: 2px solid darkseagreen;
+    align-self: flex-end;
+    margin-right: 20px;
+}
+
+.photo--icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */

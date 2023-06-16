@@ -1,0 +1,20 @@
+.search{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.search--input {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.advancedSearch-btn {
+    margin-bottom: 30px;
+}
+
+.advancedSearch-btn:hover{
+    cursor: pointer;
+    opacity: 70%;
+}

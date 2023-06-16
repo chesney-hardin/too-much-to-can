@@ -196,6 +196,7 @@ export const EditPost = () => {
                 <label>Looking to Trade?</label>
                 <input type="checkbox"
                     value={updatedPost.trade}
+                    checked={updatedPost.trade}
                     onChange={
                         (evt) => {
                             const copy = { ...updatedPost }

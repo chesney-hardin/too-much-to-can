@@ -3,7 +3,7 @@
     height: auto;
     padding: -8px;
     border-radius: 10%;
-    margin: 5px;
+    margin: 15px 5px;
 }
 
 .replyMessageIcon:hover{
@@ -14,6 +14,11 @@
 .deleteMessageIcon:hover{
     cursor: pointer;
     opacity: 70%;
+}
+
+.message--icons{
+    display:flex; 
+    justify-content:flex-end;
 }
 
 .message{
