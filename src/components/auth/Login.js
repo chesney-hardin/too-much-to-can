@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom"
 import "./Login.css"
 
 export const Login = () => {
-    const [email, set] = useState("athompson@yahoo.com")
-    const [password, setPassword] = useState("greentoe")
+    const [email, set] = useState("elizabethd@example.com")
+    const [password, setPassword] = useState("strawberry")
     const navigate = useNavigate()
 
     const handleLogin = (e) => {
