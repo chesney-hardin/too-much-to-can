@@ -1,5 +1,7 @@
 import { Link, useNavigate } from "react-router-dom"
 import "./NavBar.css"
+import { InboxCount } from "./InboxCount"
+
 
 
 export const NavBar = () => {
@@ -19,7 +21,7 @@ export const NavBar = () => {
           </li> */}
             <li className="navbar__item active navbar__list">
                 <Link className="navbar__link" to="/profile">{currentUser.username}</Link> <br />
-                <Link className="navbar__link" to="/inbox">Inbox</Link> <br />
+                <Link className="navbar__link" to="/inbox"><InboxCount /></Link> <br />
                 
                 {
                     localStorage.getItem("tomato_user")
