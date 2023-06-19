@@ -36,13 +36,26 @@ export const IndividualPost = () => {
         [postId]
     )
 
+
+
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        });
+    }
+
+
+
     return <>
         <section className="individual--post">
             <header className="individual--postHeader">{post?.title}</header>
             <img className="individual--postPhoto" src={post?.photoURL} alt="photo of produce" />
             <ul>
                 <li>County: {post?.county?.name}</li>
-                <li>Pick Up Before: {post?.dateAvailableTil}</li>
+                <li>Pick Up Before: {formatDate(post?.dateAvailableTil)}</li>
                 <li>Posted By: {post?.user?.username}</li>
                 <li> {
                     post?.trade
