@@ -1,11 +1,11 @@
 .post {
-    margin: 10px;
-    border: 2px solid darkseagreen;
+    margin: 10px 20px 15px 20px;
+    border: 2px solid darkred;
     border-radius: 10%;
     box-shadow: 0 0 3px darkolivegreen;
     padding: 8px;
     background-color: whitesmoke;
-    height: auto;
+    height: 250px;
 }
 
 .post header {
@@ -15,8 +15,9 @@
 
 .postPhoto {
     width: 100%;
-    height: auto;
+    height: 150px;
     border-radius: 5%;
+    object-fit: cover;
 }
 
 .post__link {
@@ -37,8 +38,8 @@
     opacity: 70%;
 }
 
-   .posts{
+.posts {
     display: grid;
-  grid-template-columns: repeat(3, 1fr);
-   }
-  
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}

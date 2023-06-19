@@ -55,6 +55,7 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
                                     //value={sortByDate}
                                     onChange={
                                         (evt) => {
+                                            debugger
                                             setByDate(evt.target.checked)
                                         }
                                     } />

@@ -23,6 +23,7 @@
     text-decoration: none;
     font-weight: bold;
     color: whitesmoke;
+    font-family: 'Lato', sans-serif;
   
   }
   
@@ -35,6 +36,9 @@
   .subtitle{
     text-align: center;
     letter-spacing: 2px;
+    font-size: 25px;
+    font-family: 'Just Another Hand', cursive;
+    margin: 10px;
   }
 
   .homepage{

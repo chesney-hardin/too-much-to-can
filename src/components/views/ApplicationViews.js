@@ -18,7 +18,7 @@ export const ApplicationViews = () => {
 		<Routes>
 			<Route path="/" element={
 				<>
-					<h1 className="title--main">TOO MUCH TO CAN</h1>
+					
 
 
 					<Outlet />

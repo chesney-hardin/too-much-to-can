@@ -28,7 +28,6 @@ export const RandomPost = () => {
         const randomIndex = Math.floor(Math.random() * posts.length)
         const randomPostObject = posts[randomIndex]
         setRandomPost(randomPostObject)
-        console.log(randomPost)
     }
 
 

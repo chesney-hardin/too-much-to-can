@@ -65,3 +65,16 @@
     margin-inline-end: 0px;
     font-weight: bold;
 }
+
+.replied--true {
+    opacity: 70%;
+    width: 85%;
+    margin: 10px;
+    border: 2px solid darkseagreen;
+    border-radius: 4%;
+    box-shadow: 0 0 3px darkolivegreen;
+    padding: 8px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}

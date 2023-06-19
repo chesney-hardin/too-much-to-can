@@ -4,11 +4,11 @@
     justify-content: space-between;
     margin-top: 50px;
     margin-bottom: -50px;
+    position: relative;
 }
 
 .navbar__item {
-    flex-basis: 20%;
-    list-style-type: none;
+    flex-basis: 15%;
 }
 
 .navbar__logout {
@@ -16,15 +16,71 @@
 }
 
 .tomatoLogo {
-    width: 60px;
+    width: 70px;
     height: auto;
+    
 }
 
-.tomatoLogo:hover{
+.tomatoLogo:hover {
     cursor: pointer;
     opacity: 70%;
 }
 
-.navbar__list{
-    text-align: center;
+.title--div {
+    flex-basis: 70%;
 }
+
+.dropdown-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: darkslategray;
+}
+
+
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+    background-color: darkslategray;
+    border-radius: 5%;
+    border-top: 3px solid darkred;
+    margin-top: 10px;
+}
+
+.navbar__link{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    padding: 4px;
+    font-weight: bold;
+}
+
+.dropdown-content a:hover {
+    opacity: 70%;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    white-space: nowrap;
+    
+}
+
