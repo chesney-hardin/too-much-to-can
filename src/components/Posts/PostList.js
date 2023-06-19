@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import "./PostList.css"
 import { Link } from "react-router-dom"
 
-export const PostList = ({ searchTermState, advancedSearch }) => {
+export const PostList = ({ searchTermState, advancedSearch, sortByDate }) => {
     const [posts, setPosts] = useState([])
     const [filteredPosts, setFilteredPosts] = useState([])
 
@@ -59,12 +59,38 @@ export const PostList = ({ searchTermState, advancedSearch }) => {
                 const nonUsersPosts = posts.filter(post => {
                     return post?.userId !== currentUser.id
                 })
+                if(sortByDate) {
+                    const postsToSort = [...nonUsersPosts].sort((a, b) => {
+                        const dateA = new Date(a.dateCreated)
+                        const dateB = new Date(b.dateCreated)
+                        return dateB - dateA;
+                    })
+                    setFilteredPosts(postsToSort)
+                }
+                else{
                 setFilteredPosts(nonUsersPosts)
+                }
             }
         },
-        [posts]
+        [posts, sortByDate]
     )
+    /* useEffect(
+        ()=> {
+            if(sortByDate) {
+                const postsToSort = [...posts].sort((a, b) => {
+                    const dateA = new Date(a.dateCreated)
+                    const dateB = new Date(b.dateCreated)
+                    return dateA - dateB;
+                })
+                setFilteredPosts(postsToSort)
+            }
+            else{
+                setFilteredPosts(posts)}
 
+        },
+        [posts, sortByDate]
+    )
+ */
 
     return <>
         <article className="posts">

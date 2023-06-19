@@ -70,7 +70,7 @@ export const YourPosts = () => {
 
     return <>
         <div className="form-group">
-            <label>Sort By Oldest Post</label>
+            <label>Sort By Oldest</label>
             <input type="checkbox"
                 value={sortByDate}
                 onChange={
