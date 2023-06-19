@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react"
 import "./PostSearch.css"
 
-export const PostSearch = ({ setterFunction, advancedSearchFunction }) => {
+export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }) => {
     const [advancedSearch, setAdvancedSearch] = useState(false)
     const [cropTypes, setCropTypes] = useState([])
     const [chosenCrop, setChosenCrop] = useState(0)
     const [counties, setCounties] = useState([])
     const [chosenCounty, setChosenCounty] = useState(0)
+    
 
 
     useEffect(
@@ -37,8 +38,8 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction }) => {
 
     useEffect(
         () => {
-        advancedSearchFunction({ chosenCrop, chosenCounty });
-    },
+            advancedSearchFunction({ chosenCrop, chosenCounty });
+        },
         [chosenCrop, chosenCounty]);
 
 
@@ -47,6 +48,18 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction }) => {
             advancedSearch ?
                 <>
                     <form>
+                        <fieldset>
+                            <div className="form-group">
+                                <label>Sort By Newest</label>
+                                <input type="checkbox"
+                                    //value={sortByDate}
+                                    onChange={
+                                        (evt) => {
+                                            setByDate(evt.target.checked)
+                                        }
+                                    } />
+                            </div>
+                        </fieldset>
                         <fieldset>
                             <div className="form-group">
                                 <label htmlFor="cropType">Crop Type:</label>

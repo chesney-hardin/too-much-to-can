@@ -8,10 +8,11 @@ export const PostSearchParent = () => {
         chosenCrop: 0,
         chosenCounty: 0
     })
+    const [sortByDate, setByDate] = useState(false)
    
 
     return <>
-        <PostSearch setterFunction={setSearchTerms} advancedSearchFunction={setAdvancedSearch}/>
-        <PostList searchTermState={searchTerms} advancedSearch={advancedSearch}/>
+        <PostSearch setterFunction={setSearchTerms} advancedSearchFunction={setAdvancedSearch} setByDate={setByDate}/>
+        <PostList searchTermState={searchTerms} advancedSearch={advancedSearch} sortByDate={sortByDate}/>
     </>
 }
