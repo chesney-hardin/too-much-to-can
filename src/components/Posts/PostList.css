@@ -6,6 +6,8 @@
     padding: 8px;
     background-color: whitesmoke;
     height: 250px;
+    display: flex;
+    flex-direction: column;
 }
 
 .post header {
@@ -17,20 +19,15 @@
     width: 100%;
     height: 150px;
     border-radius: 5%;
-    object-fit: cover;
+    flex-basis: 80%;
 }
 
 .post__link {
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
     text-align: center;
     text-decoration: none;
     text-shadow: 0 0 2px darkolivegreen;
+    font-family: 'Just Another Hand', cursive;
+    font-size: 30px;
 }
 
 .post__link:hover {

@@ -74,23 +74,7 @@ export const PostList = ({ searchTermState, advancedSearch, sortByDate }) => {
         },
         [posts, sortByDate]
     )
-    /* useEffect(
-        ()=> {
-            if(sortByDate) {
-                const postsToSort = [...posts].sort((a, b) => {
-                    const dateA = new Date(a.dateCreated)
-                    const dateB = new Date(b.dateCreated)
-                    return dateA - dateB;
-                })
-                setFilteredPosts(postsToSort)
-            }
-            else{
-                setFilteredPosts(posts)}
 
-        },
-        [posts, sortByDate]
-    )
- */
 
     return <>
         <article className="posts">
