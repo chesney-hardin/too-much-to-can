@@ -8,7 +8,7 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
     const [counties, setCounties] = useState([])
     const [chosenCounty, setChosenCounty] = useState(0)
     const [sortDate, setSortDate] = useState(false)
-    
+
 
 
     useEffect(
@@ -50,7 +50,7 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
             setByDate(sortDate)
         },
         [sortDate]
-        )
+    )
 
 
     return <>
@@ -59,7 +59,7 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
                 <>
                     <form className="advancedSearch--form">
                         <fieldset>
-                            <div className="form-group">
+                            <div className="advancedSearch--form-group">
                                 <label>Sort By Newest</label>
                                 <input type="checkbox"
                                     //value={sortDate}
@@ -71,7 +71,7 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
                             </div>
                         </fieldset>
                         <fieldset>
-                            <div className="form-group">
+                            <div className="advancedSearch--form-group">
                                 <label>Crop Type:</label>
                                 <select
                                     value={chosenCrop.id}
@@ -89,7 +89,7 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
                             </div>
                         </fieldset>
                         <fieldset>
-                            <div className="form-group">
+                            <div className="advancedSearch--form-group">
                                 <label>County:</label>
                                 <select value={chosenCounty.id}
                                     onChange={
@@ -106,7 +106,9 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
                             </div>
                         </fieldset>
                     </form>
-                    <button className="seeAllPosts-btn" onClick={seeAllPostsButton}>See All Posts</button>
+                    <div className="seeAllPosts-btn-div">
+                        <button className="seeAllPosts-btn" onClick={seeAllPostsButton}>See All Posts</button>
+                    </div>
                 </>
                 : <div className="search">
                     <input

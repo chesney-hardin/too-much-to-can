@@ -39,3 +39,64 @@
     opacity: 70%;
 }
 
+.seeAllPosts-btn {
+    background-color: darkslategrey;
+    border: 1px solid whitesmoke;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-bottom: 30px;
+}
+.seeAllPosts-btn-div {
+    display: flex;
+    justify-content: center;
+}
+
+.seeAllPosts-btn:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.advancedSearch--form {
+    display: flex;
+    justify-content: center;
+}
+
+.advancedSearch--form-group {
+    margin-bottom: 20px;
+    padding: .375rem .75rem;
+    
+
+}
+
+.advancedSearch--form-group label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: darkslategray;
+    margin-right: .5rem;
+}
+
+.advancedSearch--form-group select {
+    padding: .1rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid darkolivegreen;
+    border-radius: .25rem;
+}
+.advancedSearch--form-group input {
+    padding: .375rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid darkolivegreen;
+    border-radius: .25rem;
+}
