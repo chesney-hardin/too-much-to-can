@@ -6,11 +6,31 @@
 }
 
 .search--input {
-    width: 300px;
+    width: 18rem;
     margin-bottom: 20px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid darkolivegreen;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .advancedSearch-btn {
+    background-color: darkslategrey;
+    border: 1px solid whitesmoke;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    padding: 6px 12px;
     margin-bottom: 30px;
 }
 

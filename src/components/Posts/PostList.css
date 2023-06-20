@@ -3,7 +3,7 @@
     border: 2px solid darkred;
     border-radius: 10%;
     box-shadow: 0 0 3px darkolivegreen;
-    padding: 8px;
+    padding: 1.5rem;
     background-color: whitesmoke;
     height: 250px;
     display: flex;
@@ -16,8 +16,8 @@
 }
 
 .postPhoto {
-    width: 100%;
-    height: 150px;
+    width: auto;
+    height: 8rem;
     border-radius: 5%;
     flex-basis: 80%;
 }
@@ -27,7 +27,8 @@
     text-decoration: none;
     text-shadow: 0 0 2px darkolivegreen;
     font-family: 'Just Another Hand', cursive;
-    font-size: 30px;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;;
 }
 
 .post__link:hover {
@@ -37,6 +38,6 @@
 
 .posts {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
 }
