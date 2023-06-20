@@ -57,12 +57,12 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
         {
             advancedSearch ?
                 <>
-                    <form>
+                    <form className="advancedSearch--form">
                         <fieldset>
                             <div className="form-group">
                                 <label>Sort By Newest</label>
                                 <input type="checkbox"
-                                    value={sortDate}
+                                    //value={sortDate}
                                     onChange={
                                         (evt) => {
                                             setSortDate(evt.target.checked)
