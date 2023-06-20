@@ -1,5 +1,114 @@
-.h1, h1 {
+h1 {
+    color: darkred;
+    font-family: 'Just Another Hand', cursive;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-shadow: 0 0 6px whitesmoke;
+    font-size: 80px;
+    margin: 100px auto 40px auto;
+}
+
+.form--login {
+    display: inline-block;
+    text-align: left;
+    border: 2px solid darkslategray;
+    border-radius: 3%;
+    box-shadow: 0 0 3px darkseagreen;
+    padding: 35px;
+    background-color: darkred;
+    width: 50%;
+    height: auto;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.container--login {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tomatoLogoLogin {
+    align-self: center;
+    width: 100px;
+    height: auto;
+}
+
+fieldset {
+    border: 0;
+}
+
+.form-control {
+    display: block;
+    width: 94%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+.signIn-btn, .register-btn {
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #404040;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-top: 15px auto 10px auto;
+}
+.signIn-btn:hover, .register-btn:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.link--register {
+    font-family: 'Just Another Hand', cursive;
+    font-size: 20px;
+    color: darkred;
+}
+.form-dropdown {
+    display: flex;
+    flex-direction: column;
+}
+#countyId{
+    width: 50%;
+    height: auto;
+    padding: 5px;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #404040;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+main {
+    margin-bottom: 100px;
+}
+
+/* h1 {
     font-size: 2.5rem;
+    font-family: 'Just Another Hand', cursive;
+    font-size: 50px;
 }
 
 fieldset {
@@ -9,11 +118,7 @@ fieldset {
     border: 0;
 }
 
-.form--login {
-    display: inline-block;
-    margin: 0 auto;
-    text-align: left;
-}
+
 
 .form--login > fieldset > input[type="email"] {
     width: 25em;
@@ -24,22 +129,6 @@ fieldset {
     display: inline-block;
 }
 
-.form-control {
-    display: block;
-    width: 94%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
 
 .container--login {
     text-align: center;
@@ -58,5 +147,4 @@ fieldset {
 .button--close {
     position: relative;
     bottom: -2rem;
-}
-
+} */

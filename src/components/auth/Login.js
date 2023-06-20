@@ -32,10 +32,10 @@ export const Login = () => {
 
     return (
         <main className="container--login">
+            <h1><img className="tomatoLogoLogin" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fgardener-clipart-enormous-16.png&f=1&nofb=1&ipt=501d2699ef885a852234c68c21acdc694f75d1b5db3fdb5f6ee17071dd60b72f&ipo=images" alt="tomato logo" />  Too Much To Can</h1>
+
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Too Much To Can</h1>
-                    <h2>Please sign in</h2>
                     <fieldset>
                         <label> Email address </label>
                         <input type="email"
@@ -54,15 +54,17 @@ export const Login = () => {
                             placeholder="password"
                             required autoFocus />
                     </fieldset>
-                    <fieldset>
-                        <button type="submit">
-                            Sign in
-                        </button>
-                    </fieldset>
+                    <div className="form-wrapper">
+                        <fieldset>
+                            <button className="signIn-btn" type="submit">
+                                Sign in
+                            </button>
+                        </fieldset>
+                    </div>
                 </form>
             </section>
-            <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
+            <section>
+                <Link className="link--register" to="/register">Need to register?</Link>
             </section>
         </main>
     )

@@ -70,8 +70,8 @@ export const Register = () => {
 
     return (
         <main style={{ textAlign: "center" }}>
+            <h1 className="h3 mb-3 font-weight-normal">Please Register for Too Much To Can</h1>
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Too Much To Can</h1>
                 <fieldset>
                     <label> Full Name </label>
                     <input onChange={updateCustomer}
@@ -97,9 +97,9 @@ export const Register = () => {
                         placeholder="Password" required />
                 </fieldset>
                 <fieldset>
-                    <div className="form-group">
+                    <div className="form-dropdown">
                         <label>County:</label>
-                        <select 
+                        <select
                             id="countyId"
                             onChange={(evt) => {
                                 const copy = { ...customer }
@@ -114,10 +114,11 @@ export const Register = () => {
                         </select>
                     </div>
                 </fieldset>
-
-                <fieldset>
-                    <button type="submit"> Register </button>
-                </fieldset>
+                <div className="form-wrapper">
+                    <fieldset>
+                        <button className="register-btn" type="submit"> Register </button>
+                    </fieldset>
+                </div>
             </form>
         </main>
     )
