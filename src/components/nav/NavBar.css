@@ -2,8 +2,8 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
     position: relative;
 }
 
@@ -85,10 +85,9 @@
 }
 
 .title--main {
-    margin-block-end: 0;
     text-align: center;
     color: darkred;
-    margin-bottom: 70px;
+    margin: 2rem auto 2.5rem auto;
     font-family: 'Just Another Hand', cursive;
     font-weight: 900;
     letter-spacing: 6px;
