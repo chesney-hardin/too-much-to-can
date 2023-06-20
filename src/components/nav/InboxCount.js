@@ -16,7 +16,7 @@ export const InboxCount = () => {
         []
     )
 
-    return <>
+    return <div>
         Inbox <strong className="inboxCount">{messages.length}</strong>
-    </>
+    </div>
 }

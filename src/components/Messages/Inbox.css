@@ -47,21 +47,26 @@
     justify-content: flex-start;
 }
 
-.message--response, .postTitle__link{
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+.message--response, .postTitle__link {
+    align-self: center;
 }
 
+
 .message--header {
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
+    font-family: 'Just Another Hand', cursive;
+    margin-right: 5px;
+}
+
+.replied--true {
+    opacity: 70%;
+    width: 85%;
+    margin: 10px;
+    border: 2px solid darkseagreen;
+    border-radius: 4%;
+    box-shadow: 0 0 3px darkolivegreen;
+    padding: 8px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
 }

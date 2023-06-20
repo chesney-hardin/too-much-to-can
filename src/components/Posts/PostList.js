@@ -18,19 +18,19 @@ export const PostList = ({ searchTermState, advancedSearch, sortByDate }) => {
                 })
                 setFilteredPosts(searchedPosts)
             }
-            else if(advancedSearch.chosenCounty !== 0 && advancedSearch.chosenCrop === 0) {
+            else if (advancedSearch.chosenCounty !== 0 && advancedSearch.chosenCrop === 0) {
                 const searchedPosts = posts.filter(post => {
                     return post.countyId === advancedSearch.chosenCounty
                 })
                 setFilteredPosts(searchedPosts)
             }
-            else if(advancedSearch.chosenCounty === 0 && advancedSearch.chosenCrop !== 0) {
+            else if (advancedSearch.chosenCounty === 0 && advancedSearch.chosenCrop !== 0) {
                 const searchedPosts = posts.filter(post => {
                     return post.cropTypeId === advancedSearch.chosenCrop
                 })
                 setFilteredPosts(searchedPosts)
             }
-            else if(advancedSearch.chosenCounty !== 0 && advancedSearch.chosenCrop !== 0) {
+            else if (advancedSearch.chosenCounty !== 0 && advancedSearch.chosenCrop !== 0) {
                 const searchedPosts = posts.filter(post => {
                     return post.cropTypeId === advancedSearch.chosenCrop
                         && post.countyId === advancedSearch.chosenCounty
@@ -59,7 +59,7 @@ export const PostList = ({ searchTermState, advancedSearch, sortByDate }) => {
                 const nonUsersPosts = posts.filter(post => {
                     return post?.userId !== currentUser.id
                 })
-                if(sortByDate) {
+                if (sortByDate) {
                     const postsToSort = [...nonUsersPosts].sort((a, b) => {
                         const dateA = new Date(a.dateCreated)
                         const dateB = new Date(b.dateCreated)
@@ -67,30 +67,14 @@ export const PostList = ({ searchTermState, advancedSearch, sortByDate }) => {
                     })
                     setFilteredPosts(postsToSort)
                 }
-                else{
-                setFilteredPosts(nonUsersPosts)
+                else {
+                    setFilteredPosts(nonUsersPosts)
                 }
             }
         },
         [posts, sortByDate]
     )
-    /* useEffect(
-        ()=> {
-            if(sortByDate) {
-                const postsToSort = [...posts].sort((a, b) => {
-                    const dateA = new Date(a.dateCreated)
-                    const dateB = new Date(b.dateCreated)
-                    return dateA - dateB;
-                })
-                setFilteredPosts(postsToSort)
-            }
-            else{
-                setFilteredPosts(posts)}
 
-        },
-        [posts, sortByDate]
-    )
- */
 
     return <>
         <article className="posts">

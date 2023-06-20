@@ -4,7 +4,13 @@
 /* font-family:'Montserrat Alternates', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 /* font-family: 'Lato', sans-serif; */
-
+  @import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+ /*  font-family: 'Just Another Hand', cursive;
+ */
+  @import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+ /*  font-family: 'Moirai One', cursive; */
+  @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500&display=swap');
+/*   font-family: 'M PLUS Rounded 1c', sans-serif; */
 
 /*Typography
 --------------------------------------------------------------*/
@@ -24,9 +30,6 @@ body {
     padding: 0 3rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', sans-serif;
-}
 /* font-family: "Patua One", serif; */
 
 p {
@@ -38,10 +41,11 @@ p {
   text-align: center;
   color: darkred;
   margin-bottom: 70px;
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  letter-spacing: 4px;
-  text-shadow: 0 0 4px whitesmoke;
-
+  font-family: 'Just Another Hand', cursive;
+  font-weight: 900;
+  letter-spacing: 6px;
+  text-shadow: 0 0 6px whitesmoke;
+  font-size: 80px;
+  position: sticky;
 }
 

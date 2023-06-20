@@ -7,6 +7,7 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
     const [chosenCrop, setChosenCrop] = useState(0)
     const [counties, setCounties] = useState([])
     const [chosenCounty, setChosenCounty] = useState(0)
+    const [sortDate, setSortDate] = useState(false)
     
 
 
@@ -34,35 +35,44 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
         setAdvancedSearch(false)
         setChosenCounty(0)
         setChosenCrop(0)
+        setSortDate(false)
     }
 
     useEffect(
         () => {
-            advancedSearchFunction({ chosenCrop, chosenCounty });
+            advancedSearchFunction({ chosenCrop, chosenCounty })
         },
-        [chosenCrop, chosenCounty]);
+        [chosenCrop, chosenCounty]
+    )
+
+    useEffect(
+        () => {
+            setByDate(sortDate)
+        },
+        [sortDate]
+        )
 
 
     return <>
         {
             advancedSearch ?
                 <>
-                    <form>
+                    <form className="advancedSearch--form">
                         <fieldset>
                             <div className="form-group">
                                 <label>Sort By Newest</label>
                                 <input type="checkbox"
-                                    //value={sortByDate}
+                                    //value={sortDate}
                                     onChange={
                                         (evt) => {
-                                            setByDate(evt.target.checked)
+                                            setSortDate(evt.target.checked)
                                         }
                                     } />
                             </div>
                         </fieldset>
                         <fieldset>
                             <div className="form-group">
-                                <label htmlFor="cropType">Crop Type:</label>
+                                <label>Crop Type:</label>
                                 <select
                                     value={chosenCrop.id}
                                     onChange={
@@ -80,7 +90,7 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
                         </fieldset>
                         <fieldset>
                             <div className="form-group">
-                                <label htmlFor="counties">County:</label>
+                                <label>County:</label>
                                 <select value={chosenCounty.id}
                                     onChange={
                                         (evt) => {

@@ -49,7 +49,7 @@ export const Inbox = () => {
     return <article className="messages">
         {
             sortedMessages.map(message => {
-                return <section key={`message--${message.id}`} className="message">
+                return <section key={`message--${message.id}`} className={`message replied--${message.replied}`}>
                     <div className="message--div">
                         <h3 className="message--header">From:</h3>
                         <div className="message--response">{message?.user?.username}</div>
@@ -61,6 +61,12 @@ export const Inbox = () => {
                     <div className="message--div">
                         <h3 className="message--header">Message:</h3>
                         <div className="message--response">{message?.text}</div>
+                    </div>
+                    <div>
+                        {message.replied
+                            ? <div>Replied</div>
+                            : ""
+                        }
                     </div>
                     <div className="message--icons">
                         <img className="replyMessageIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F361-3618042_transparent-envelope-icon-png-circle-email-logo-png.png&f=1&nofb=1&ipt=9512d26463a4b5eb6ce48a981247c36a3e6a3d7284d6c1454f4a2feaed53bbc6&ipo=images" alt="send message"

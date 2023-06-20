@@ -1,6 +1,7 @@
 .sendMessageIcon {
     width: 7%;
     height: auto;
+    align-self: flex-end;
 }
 
 .sendMessageIcon:hover{
@@ -11,7 +12,7 @@
 .individual--post{
     margin: 50px;
     border: 2px solid darkseagreen;
-    border-radius: 10%;
+    border-radius: 5%;
     box-shadow: 0 0 3px darkolivegreen;
     padding: 35px;
     background-color: whitesmoke;
@@ -20,21 +21,35 @@
     flex-direction: column;
 }
 .individual--postPhoto{
-    width: 80%;
+    width: 50%;
     height: auto;
     align-self: center;
     border-radius: 5%;
 }
 
 .individual--postHeader{
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    font-family: 'Just Another Hand', cursive;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    text-shadow: 0 0 2px darkolivegreen;
+    letter-spacing: 1px;
+    
 }
+
+.individual--postDiv{
+    display: flex;
+
+}
+
+.individual--list{
+    list-style: none;
+
+}
+
+.individual--listHeader{
+    font-family: 'Just Another Hand', cursive;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
