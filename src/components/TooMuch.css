@@ -15,7 +15,6 @@
 /*Typography
 --------------------------------------------------------------*/
 body,
-button,
 input,
 select,
 textarea {
@@ -46,6 +45,5 @@ p {
   letter-spacing: 6px;
   text-shadow: 0 0 6px whitesmoke;
   font-size: 80px;
-  position: sticky;
 }
 
