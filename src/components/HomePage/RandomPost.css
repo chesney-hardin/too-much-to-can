@@ -22,16 +22,14 @@
 }
 
 .randomPost__link {
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-family: 'Just Another Hand', cursive;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    text-shadow: 0 0 2px darkolivegreen;
+    text-shadow: 0 0 1.5px darkolivegreen;
+    color: darkslategray;
 }
 
 .randomPost__link:hover {
