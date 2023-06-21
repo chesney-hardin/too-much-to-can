@@ -1,4 +1,4 @@
-.createPost{
+.createPost, .editPost{
     padding: 3rem 6rem;
     border: 2px solid darkseagreen;
     border-radius: 4%;
@@ -9,7 +9,7 @@
 
 }
 
-.create-post-btn {
+.create-post-btn, .update-post-btn {
     background-color: darkred;
     border: 1px solid whitesmoke;
     border-radius: .25rem;
@@ -23,17 +23,17 @@
     font-weight: 600;
 }
 
-.create-post-btn:hover{
+.create-post-btn:hover, .update-post-btn:hover{
     cursor: pointer;
     opacity: 70%;
 }
 
-.create-post-btn-div{
+.create-post-btn-div, .update-post-btn-div{
     display:flex;
     justify-content: flex-end;
 }
 
-.createPost-group select {
+.createPost-group select, .editPost-group select {
     padding: .1rem 1rem;
     font-size: .85rem;
     font-weight: 400;
@@ -45,7 +45,7 @@
     width: 13rem;
 }
 
-.createPost-group label{
+.createPost-group label, .editPost-group label{
     font-weight: 600;
     font-family: 'Just Another Hand', cursive;
     letter-spacing: 2px;

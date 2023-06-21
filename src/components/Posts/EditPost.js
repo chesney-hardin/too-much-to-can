@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import "./CreatePost.css"
 
 export const EditPost = () => {
     const { postId } = useParams()
     const [cropTypes, setCropTypes] = useState([])
     const [counties, setCounties] = useState([])
-    const [updatedPost, setUpdatedPost ] = useState({
+    const [updatedPost, setUpdatedPost] = useState({
         countyId: 0,
         dateAvailableTil: "",
         dateCreated: "",
@@ -69,10 +70,10 @@ export const EditPost = () => {
             })
     }
 
-    return <form className="editPostForm">
+    return <form className="editPost">
 
         <fieldset>
-            <div className="form-group">
+            <div className="editPost-group">
                 <label htmlFor="title">Title:</label>
                 <input
                     required autoFocus
@@ -81,7 +82,7 @@ export const EditPost = () => {
                         height: "2rem"
                     }}
                     className="form-control"
-                    placeholder= {updatedPost.title}
+                    placeholder={updatedPost.title}
                     value={updatedPost.title}
                     onChange={
                         (evt) => {
@@ -93,8 +94,8 @@ export const EditPost = () => {
             </div>
         </fieldset>
         <fieldset>
-            <div className="form-group">
-                <label htmlFor="cropType">"Crop" Type:</label>
+            <div className="editPost-group">
+                <label htmlFor="cropType">Crop Type:</label>
                 <select value={updatedPost.cropTypeId}
                     onChange={
                         (evt) => {
@@ -112,7 +113,7 @@ export const EditPost = () => {
             </div>
         </fieldset>
         <fieldset>
-            <div className="form-group">
+            <div className="editPost-group">
                 <label htmlFor="counties">County:</label>
                 <select value={updatedPost.countyId}
                     onChange={
@@ -131,7 +132,7 @@ export const EditPost = () => {
             </div>
         </fieldset>
         <fieldset>
-            <div className="form-group">
+            <div className="editPost-group">
                 <label htmlFor="availableTil">Pick up before:</label>
                 <input
                     required autoFocus
@@ -151,8 +152,8 @@ export const EditPost = () => {
             </div>
         </fieldset>
         <fieldset>
-            <div className="form-group">
-                <label>Today's Date:</label>
+            <div className="editPost-group">
+                <label>Date Posted:</label>
                 <input
                     required autoFocus
                     type="date"
@@ -171,7 +172,7 @@ export const EditPost = () => {
             </div>
         </fieldset>
         <fieldset>
-            <div className="form-group">
+            <div className="editPost-group">
                 <label>Photo:</label>
                 <input
                     required autoFocus
@@ -192,7 +193,7 @@ export const EditPost = () => {
             </div>
         </fieldset>
         <fieldset>
-            <div className="form-group">
+            <div className="editPost-group">
                 <label>Looking to Trade?</label>
                 <input type="checkbox"
                     value={updatedPost.trade}
@@ -207,16 +208,14 @@ export const EditPost = () => {
             </div>
         </fieldset>
         <fieldset>
-            <div className="form-group">
+            <div className="editPost-group">
                 <label>Description:</label>
-                <input
+                <textarea
                     required autoFocus
-                    type="text"
                     style={{
                         height: "5rem"
                     }}
                     className="form-control"
-                    placeholder="Amount, variety, etc..."
                     value={updatedPost.description}
                     onChange={
                         (evt) => {
@@ -224,14 +223,16 @@ export const EditPost = () => {
                             copy.description = evt.target.value
                             setUpdatedPost(copy)
                         }
-                    } />
+                    }>
+                    </textarea>
             </div>
         </fieldset>
-        <button
-            onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-            className="btn btn-primary"
-        >Save</button>
-
+        <div className="update-post-btn-div">
+            <button
+                onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+                className="update-post-btn"
+            >Update Post</button>
+        </div>
     </form>
 
 }

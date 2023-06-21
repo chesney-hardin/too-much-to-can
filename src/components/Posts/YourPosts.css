@@ -1,15 +1,33 @@
 .editPostIcon, .deletePostIcon {
     width: 10%;
     height: auto;
-    padding: 4px;
+    border: 2px solid whitesmoke;
+    border-radius: 12%;
+    margin: 5px;
+    box-shadow: 0 0 5px whitesmoke;
 }
 
-.editPostIcon:hover{
+.editPostIcon:hover, .deletePostIcon:hover{
     cursor: pointer;
     opacity: 70%;
 }
 
-.deletePostIcon:hover{
-    cursor: pointer;
-    opacity: 70%;
+
+.icons-div{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.post-date{
+    font-size: 20px;
+    font-family: 'Just Another Hand', cursive;
+    letter-spacing: 1px;
+}
+
+.sortOldest {
+    margin-left: 4rem;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: darkslategray;
 }
