@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./CreatePost.css"
 
 export const CreatePost = () => {
     const [cropTypes, setCropTypes] = useState([])
@@ -57,169 +58,174 @@ export const CreatePost = () => {
             })
     }
 
-    return <form className="messageForm">
+    return (
+    <section>
+        <form className="createPost">
 
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="title">Title:</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    style={{
-                        height: "2rem"
-                    }}
-                    className="form-control"
-                    placeholder="Title for your post..."
-                    value={post.title}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.title = evt.target.value
-                            copy.userId = currentUser.id
-                            setPost(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="cropType">"Crop" Type:</label>
-                <select value={post.cropTypeId}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.cropTypeId = JSON.parse(evt.target.value)
-                            setPost(copy)
-                        }
-                    } >
-                    <option value="0">Select Crop Type</option>
-                    {cropTypes.map((cropType) =>
-                        <option key={`cropType--${cropType.id}`} value={cropType.id}>{cropType.name}</option>
-                    )}
+            <fieldset>
+                <div className="createPost-group">
+                    <label htmlFor="title">Title:</label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        style={{
+                            height: "2rem"
+                        }}
+                        className="form-control"
+                        placeholder="Title for your post..."
+                        value={post.title}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...post }
+                                copy.title = evt.target.value
+                                copy.userId = currentUser.id
+                                setPost(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="createPost-group">
+                    <label htmlFor="cropType">Crop Type:</label>
+                    <select value={post.cropTypeId}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...post }
+                                copy.cropTypeId = JSON.parse(evt.target.value)
+                                setPost(copy)
+                            }
+                        } >
+                        <option value="0">Select Crop Type</option>
+                        {cropTypes.map((cropType) =>
+                            <option key={`cropType--${cropType.id}`} value={cropType.id}>{cropType.name}</option>
+                        )}
 
-                </select>
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="counties">County:</label>
-                <select value={post.countyId}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.countyId = JSON.parse(evt.target.value)
-                            setPost(copy)
-                        }
-                    } >
-                    <option value="0">Select County</option>
-                    {counties.map((county) =>
-                        <option key={`county--${county.id}`} value={county.id}>{county.name}</option>
-                    )}
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="createPost-group">
+                    <label htmlFor="counties">County:</label>
+                    <select value={post.countyId}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...post }
+                                copy.countyId = JSON.parse(evt.target.value)
+                                setPost(copy)
+                            }
+                        } >
+                        <option value="0">Select County</option>
+                        {counties.map((county) =>
+                            <option key={`county--${county.id}`} value={county.id}>{county.name}</option>
+                        )}
 
-                </select>
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="availableTil">Pick up before:</label>
-                <input
-                    required autoFocus
-                    type="date"
-                    style={{
-                        height: "2rem"
-                    }}
-                    className="form-control"
-                    value={post.dateAvailableTil}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.dateAvailableTil = evt.target.value
-                            setPost(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label htmlFor="dateCreated">Today's Date:</label>
-                <input
-                    required autoFocus
-                    type="date"
-                    style={{
-                        height: "2rem"
-                    }}
-                    className="form-control"
-                    value={post.dateCreated}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.dateCreated = evt.target.value
-                            setPost(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label>Photo:</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    style={{
-                        height: "2rem"
-                    }}
-                    className="form-control"
-                    placeholder="Link to a photo of your goodies..."
-                    value={post.photoURL}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.photoURL = evt.target.value
-                            setPost(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label>Looking to Trade?</label>
-                <input type="checkbox"
-                    value={post.trade}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.trade = evt.target.checked
-                            setPost(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label>Description:</label>
-                <input
-                    required autoFocus
-                    type="text"
-                    style={{
-                        height: "5rem"
-                    }}
-                    className="form-control"
-                    placeholder="Amount, variety, etc..."
-                    value={post.description}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.description = evt.target.value
-                            setPost(copy)
-                        }
-                    } />
-            </div>
-        </fieldset>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="createPost-group">
+                    <label htmlFor="availableTil">Pick up before:</label>
+                    <input
+                        required autoFocus
+                        type="date"
+                        style={{
+                            height: "2rem"
+                        }}
+                        className="form-control"
+                        value={post.dateAvailableTil}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...post }
+                                copy.dateAvailableTil = evt.target.value
+                                setPost(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="createPost-group">
+                    <label htmlFor="dateCreated">Today's Date:</label>
+                    <input
+                        required autoFocus
+                        type="date"
+                        style={{
+                            height: "2rem"
+                        }}
+                        className="form-control"
+                        value={post.dateCreated}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...post }
+                                copy.dateCreated = evt.target.value
+                                setPost(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="createPost-group">
+                    <label>Photo:</label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        style={{
+                            height: "2rem"
+                        }}
+                        className="form-control"
+                        placeholder="Link to a photo of your goodies..."
+                        value={post.photoURL}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...post }
+                                copy.photoURL = evt.target.value
+                                setPost(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="createPost-group">
+                    <label>Looking to Trade?</label>
+                    <input type="checkbox"
+                        value={post.trade}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...post }
+                                copy.trade = evt.target.checked
+                                setPost(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="createPost-group">
+                    <label>Description:</label>
+                    <textarea
+                        required autoFocus
+                        style={{
+                            height: "5rem"
+                        }}
+                        className="form-control"
+                        value={post.description}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...post }
+                                copy.description = evt.target.value
+                                setPost(copy)
+                            }
+                        } >
+                        Amount, variety, etc...
+                    </textarea>
+                </div>
+            </fieldset>
+
+        <div className="create-post-btn-div">
         <button
             onClick={handleSaveButtonClick}
-            className="btn btn-primary"
-        >Send</button>
-
-    </form>
-
+            className="create-post-btn"
+        >Create Post</button>
+        </div>
+        </form>
+    </section>
+    )
 }
