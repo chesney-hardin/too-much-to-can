@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import "./PostList.css"
-import { Link } from "react-router-dom"
+import { PostListJSX } from "./PostListJSX"
 
 export const PostList = ({ searchTermState, advancedSearch, sortByDate }) => {
     const [posts, setPosts] = useState([])
@@ -74,21 +74,14 @@ export const PostList = ({ searchTermState, advancedSearch, sortByDate }) => {
         },
         [posts, sortByDate]
     )
-
+    useEffect(
+        () => {
+            <PostListJSX filteredPosts={filteredPosts} />
+        },
+        [filteredPosts]
+    )
 
     return <>
-        <article className="posts">
-            {
-                filteredPosts.map(post => {
-                    return <section className="post" key={`post--${post.id}`}>
-                        <Link className="post__link" to={`/posts/${post.id}`}>{post.title}</Link>
-                        <img className="postPhoto" src={post.photoURL} alt="photo of produce" />
-
-                    </section>
-                })
-            }
-        </article>
+        <PostListJSX filteredPosts={filteredPosts} />
     </>
 }
-
-//onClick={() => { navigate(`/posts/${post.id}`) }}
