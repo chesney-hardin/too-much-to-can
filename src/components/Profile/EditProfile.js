@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./EditProfile.css"
 
 
 export const EditProfile = () => {
@@ -34,7 +35,7 @@ export const EditProfile = () => {
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
-        // TODO: Perform the fetch() to POST the object to the API
+
         return fetch(`http://localhost:8088/users/${currentUser.id}`, {
             method: "PUT",
             headers: {
@@ -56,10 +57,10 @@ export const EditProfile = () => {
     }
 
 
-    return <>
+    return <div className="editProfileForm-div">
         <form className="editProfileForm">
             <fieldset>
-                <div className="form-group">
+                <div className="editProfile-group">
                     <label>Name:</label>
                     <input
                         required autoFocus
@@ -80,7 +81,7 @@ export const EditProfile = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="editProfile-group">
                     <label>Email:</label>
                     <input
                         required autoFocus
@@ -101,7 +102,7 @@ export const EditProfile = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="editProfile-group">
                     <label>Password:</label>
                     <input
                         required autoFocus
@@ -122,7 +123,7 @@ export const EditProfile = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="editProfile-group">
                     <label>Username:</label>
                     <input
                         required autoFocus
@@ -143,7 +144,7 @@ export const EditProfile = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="editProfile-group">
                     <label>County:</label>
                     <select value={user.countyId}
                         onChange={
@@ -162,12 +163,13 @@ export const EditProfile = () => {
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset className="saveProfileButton-container">
                 <button
                     onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-                    className="btn saveProfileButton"
-                >Save</button>
+                    className="saveProfileButton"
+                >Save Profile</button>
             </fieldset>
         </form>
-    </>
+    </div>
+   
 }
