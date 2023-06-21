@@ -88,9 +88,9 @@ export const YourPosts = () => {
                         <img className="postPhoto" src={post.photoURL} alt="photo of produce" />
                         <div className="post-date">Posted: {formatDate(post.dateCreated)}</div>
                         <div className="icons-div">
-                            <img className="editPostIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.1yUH3mIs0Em_iY6RkTztzAHaHa%26pid%3DApi&f=1&ipt=42e7e1566b75a8ce3647acfa4b1c8da58776f3787cb14d35d6f7cc3d857442a7&ipo=images" alt="edit post"
+                            <img className="editPostIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.psrgInv2Fjtk6Oj2nGqB_gHaFC%26pid%3DApi&f=1&ipt=43f0ce55ccbf6f8d7559b0331d7c9aa4bf5c3d3689c154f5c08edcf3e003e124&ipo=images" alt="edit post"
                                 onClick={() => { navigate(`/editpost/${post.id}`) }} />
-                            <img className="deletePostIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.WYJg_e2tOPf1eAHMG-h8UgHaHa%26pid%3DApi&f=1&ipt=6205f7ec3ea45406318651bb20b8da54383ac143cfca7a62d6511aaaaf0d053a&ipo=images" alt="delete post"
+                            <img className="deletePostIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn1.iconfinder.com%2Fdata%2Ficons%2Fbasic-ui-elements-color%2F700%2F010_trash-2-512.png&f=1&nofb=1&ipt=c999eb42090a6b28e04bcf294487ee440f1dd22a683d351fbf954e9d8f848a43&ipo=images" alt="delete post"
                                 onClick={() => { deletePost(post) }} />
                         </div>
                     </section>

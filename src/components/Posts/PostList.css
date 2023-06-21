@@ -8,6 +8,8 @@
     height: 250px;
     display: flex;
     flex-direction: column;
+    width: 250px;
+    justify-self: start;
 }
 
 .post header {
@@ -28,7 +30,8 @@
     text-shadow: 0 0 2px darkolivegreen;
     font-family: 'Just Another Hand', cursive;
     font-size: 1.5rem;
-    letter-spacing: .1rem;;
+    letter-spacing: .1rem;
+    ;
 }
 
 .post__link:hover {
@@ -38,6 +41,20 @@
 
 .posts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
     grid-gap: 20px;
+    justify-content: flex-start;
+}
+
+.noPostsDisplayed {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 3rem 8rem;
+    padding: .75rem 1rem;
+    border: 2px solid darkseagreen;
+    border-radius: 4%;
+    box-shadow: 0 0 3px darkolivegreen;
+    background-color: darkslategray;
+    color: whitesmoke;
 }

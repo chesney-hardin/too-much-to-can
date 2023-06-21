@@ -1,10 +1,13 @@
-.editPostIcon, .deletePostIcon {
+.editPostIcon {
+    width: 15%;
+    height: auto;
+    margin: 3px;
+}
+
+.deletePostIcon {
     width: 10%;
     height: auto;
-    border: 2px solid whitesmoke;
-    border-radius: 12%;
-    margin: 5px;
-    box-shadow: 0 0 5px whitesmoke;
+    margin: 3px;
 }
 
 .editPostIcon:hover, .deletePostIcon:hover{

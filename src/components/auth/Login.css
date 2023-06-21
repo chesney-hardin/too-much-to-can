@@ -17,7 +17,7 @@
     box-shadow: 0 0 3px darkseagreen;
     padding: 35px;
     background-color: darkred;
-    width: 50%;
+    width: 28rem;
     height: auto;
     color: whitesmoke;
     font-weight: bold;
@@ -80,7 +80,7 @@ fieldset {
 
 .link--register {
     font-family: 'Just Another Hand', cursive;
-    font-size: 20px;
+    font-size: 28px;
     color: darkred;
 }
 .form-dropdown {
@@ -106,46 +106,3 @@ main {
     margin-bottom: 100px;
 }
 
-/* h1 {
-    font-size: 2.5rem;
-    font-family: 'Just Another Hand', cursive;
-    font-size: 50px;
-}
-
-fieldset {
-    min-width: 0;
-    padding: 1rem 0;
-    margin: 0;
-    border: 0;
-}
-
-
-
-.form--login > fieldset > input[type="email"] {
-    width: 25em;
-}
-
-.label--login {
-    width: 8rem;
-    display: inline-block;
-}
-
-
-.container--login {
-    text-align: center;
-}
-
-.form--login {
-    background-position-x: right;
-    z-index: 1;
-    min-height: 25rem;
-    min-width: 45rem;
-    background-color: hsla(0,0%,100%,0.40);
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-}
-
-.button--close {
-    position: relative;
-    bottom: -2rem;
-} */
