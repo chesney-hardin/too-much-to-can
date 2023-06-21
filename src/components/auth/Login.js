@@ -33,11 +33,10 @@ export const Login = () => {
     return (
         <main className="container--login">
             <h1><img className="tomatoLogoLogin" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fgardener-clipart-enormous-16.png&f=1&nofb=1&ipt=501d2699ef885a852234c68c21acdc694f75d1b5db3fdb5f6ee17071dd60b72f&ipo=images" alt="tomato logo" />  Too Much To Can</h1>
-
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
                     <fieldset>
-                        <label> Email address </label>
+                        <label>Email address</label>
                         <input type="email"
                             value={email}
                             onChange={evt => set(evt.target.value)}
@@ -46,7 +45,7 @@ export const Login = () => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <label> Password</label>
+                        <label>Password</label>
                         <input type="password"
                             value={password}
                             onChange={evt => setPassword(evt.target.value)}

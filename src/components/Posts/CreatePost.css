@@ -1,0 +1,53 @@
+.createPost{
+    padding: 3rem 6rem;
+    border: 2px solid darkseagreen;
+    border-radius: 4%;
+    box-shadow: 0 0 3px darkolivegreen;
+    background-color: darkslategray;
+    color: whitesmoke;
+    margin: auto 5rem 8rem 5rem;
+
+}
+
+.create-post-btn {
+    background-color: darkred;
+    border: 1px solid whitesmoke;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    padding: 7px 15px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.create-post-btn:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.create-post-btn-div{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.createPost-group select {
+    padding: .1rem 1rem;
+    font-size: .85rem;
+    font-weight: 400;
+    color: #495057;
+    background-clip: padding-box;
+    border: 1px solid darkolivegreen;
+    border-radius: .25rem;
+    margin-left: .4rem;
+    width: 13rem;
+}
+
+.createPost-group label{
+    font-weight: 600;
+    font-family: 'Just Another Hand', cursive;
+    letter-spacing: 2px;
+    font-size: 20px;
+}

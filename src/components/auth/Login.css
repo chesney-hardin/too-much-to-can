@@ -1,12 +1,13 @@
-h1 {
+.container--login h1 {
     color: darkred;
     font-family: 'Just Another Hand', cursive;
     font-weight: 900;
     letter-spacing: 6px;
     text-shadow: 0 0 6px whitesmoke;
     font-size: 80px;
-    margin: 100px auto 40px auto;
+    margin: 100px auto 20px auto;
 }
+
 
 .form--login {
     display: inline-block;
