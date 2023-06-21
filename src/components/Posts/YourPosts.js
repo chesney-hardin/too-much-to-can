@@ -42,8 +42,8 @@ export const YourPosts = () => {
 
 
     useEffect(
-        ()=> {
-            if(sortByDate) {
+        () => {
+            if (sortByDate) {
                 const postsToSort = [...posts].sort((a, b) => {
                     const dateA = new Date(a.dateCreated)
                     const dateB = new Date(b.dateCreated)
@@ -51,8 +51,9 @@ export const YourPosts = () => {
                 })
                 setSorted(postsToSort)
             }
-            else{
-                setSorted(posts)}
+            else {
+                setSorted(posts)
+            }
 
         },
         [posts, sortByDate]
@@ -69,7 +70,7 @@ export const YourPosts = () => {
 
 
     return <>
-        <div className="form-group">
+        <div className="sortOldest">
             <label>Sort By Oldest</label>
             <input type="checkbox"
                 value={sortByDate}
@@ -84,12 +85,14 @@ export const YourPosts = () => {
                 sortedPosts.map(post => {
                     return <section className="post" key={`post--${post.id}`}>
                         <Link className="post__link" to={`/posts/${post.id}`}>{post.title}</Link>
-                        <div>Date Posted: {formatDate(post.dateCreated)}</div>
                         <img className="postPhoto" src={post.photoURL} alt="photo of produce" />
-                        <img className="editPostIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.1yUH3mIs0Em_iY6RkTztzAHaHa%26pid%3DApi&f=1&ipt=42e7e1566b75a8ce3647acfa4b1c8da58776f3787cb14d35d6f7cc3d857442a7&ipo=images" alt="edit post"
-                            onClick={() => { navigate(`/editpost/${post.id}`) }} />
-                        <img className="deletePostIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.WYJg_e2tOPf1eAHMG-h8UgHaHa%26pid%3DApi&f=1&ipt=6205f7ec3ea45406318651bb20b8da54383ac143cfca7a62d6511aaaaf0d053a&ipo=images" alt="delete post"
-                            onClick={() => { deletePost(post) }} />
+                        <div className="post-date">Posted: {formatDate(post.dateCreated)}</div>
+                        <div className="icons-div">
+                            <img className="editPostIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.1yUH3mIs0Em_iY6RkTztzAHaHa%26pid%3DApi&f=1&ipt=42e7e1566b75a8ce3647acfa4b1c8da58776f3787cb14d35d6f7cc3d857442a7&ipo=images" alt="edit post"
+                                onClick={() => { navigate(`/editpost/${post.id}`) }} />
+                            <img className="deletePostIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.WYJg_e2tOPf1eAHMG-h8UgHaHa%26pid%3DApi&f=1&ipt=6205f7ec3ea45406318651bb20b8da54383ac143cfca7a62d6511aaaaf0d053a&ipo=images" alt="delete post"
+                                onClick={() => { deletePost(post) }} />
+                        </div>
                     </section>
                 })
             }

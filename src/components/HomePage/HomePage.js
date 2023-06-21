@@ -5,7 +5,7 @@ import { RandomPost } from "./RandomPost"
 export const HomePage = () => {
     return <section className="homepage">
         
-        <h3 className="subtitle">Discover a Bounty of Backyard Goodness: <br/> Gardeners Uniting in Middle Tennessee!</h3>
+        <h3 className="subtitle">Connecting Home Gardeners in Middle Tennessee!</h3>
         <ul className="homepage__links">
             <li className="homepage__item active">
                 <Link className="homepage__link" to="/about">ABOUT</Link>
