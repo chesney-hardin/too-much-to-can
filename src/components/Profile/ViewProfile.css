@@ -1,5 +1,5 @@
 .editProfileIcon{
-    width: 4%;
+    width: 8%;
     height: auto;
     border-radius: 15%;
     align-self:flex-end;
@@ -17,15 +17,20 @@
 }
 
 .profile{
-    width: 85%;
-    margin: 10px;
+    margin: 50px;
     border: 2px solid darkseagreen;
-    border-radius: 4%;
+    border-radius: 5%;
     box-shadow: 0 0 3px darkolivegreen;
-    padding: 20px;
+    padding: 30px 20px 30px 30px;
     background-color: whitesmoke;
+    height: auto;
     display: flex;
+    width: 33rem;
     justify-content: space-around;
+}
+.profile-div{
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -35,8 +40,16 @@
     
 }
 
-.profile--header {
+.profile--listItem h3 {
     margin: 5px 10px;
+    font-family: 'Just Another Hand', cursive;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.profile--listItem div {
+    font-size: 20px;
 }
 
 .profile--list {

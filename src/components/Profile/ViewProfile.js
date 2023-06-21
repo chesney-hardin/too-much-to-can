@@ -24,7 +24,8 @@ export const ViewProfile = () => {
         []
     )
 
-    return <section className="profile">
+    return <div className="profile-div">
+    <section className="profile">
         <div className="profile--list">
             <div className="profile--listItem">
                 <h3 className="profile--header">Name:</h3>
@@ -47,10 +48,11 @@ export const ViewProfile = () => {
                 <div>{user?.county?.name}</div>
             </div>
         </div>
-        <img className="editProfileIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.1yUH3mIs0Em_iY6RkTztzAHaHa%26pid%3DApi&f=1&ipt=42e7e1566b75a8ce3647acfa4b1c8da58776f3787cb14d35d6f7cc3d857442a7&ipo=images" alt="edit post"
+        <img className="editProfileIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.psrgInv2Fjtk6Oj2nGqB_gHaFC%26pid%3DApi&f=1&ipt=43f0ce55ccbf6f8d7559b0331d7c9aa4bf5c3d3689c154f5c08edcf3e003e124&ipo=images" alt="edit post"
             onClick={() => { navigate(`/editprofile/${currentUser.id}`) }} />
 
     </section>
+    </div>
 
     /* 
     Some code for adding a profile photo. Would need to add a property to user objects

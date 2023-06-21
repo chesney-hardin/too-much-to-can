@@ -3,11 +3,12 @@ body {
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(109, 169, 7, 0.378);
+  background-color: rgb(182, 215, 168);
   color:darkslategray;
 }
 
 /* WAS IN BODY
+rgba(109, 169, 7, 0.378);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */

@@ -19,24 +19,28 @@
 .message--icons{
     display:flex; 
     justify-content:flex-end;
+    align-items: center;
 }
 
 .message{
-    width: 85%;
-    margin: 10px;
     border: 2px solid darkseagreen;
-    border-radius: 4%;
+    border-radius: 3%;
     box-shadow: 0 0 3px darkolivegreen;
-    padding: 8px;
+    padding: 8px 18px;
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
+    margin: 20px;
+    height: auto;
+    width: 40rem;
+    
 }
+
 
 .messages{
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 40px;
     align-items: center;
 }
 
@@ -47,26 +51,41 @@
     justify-content: flex-start;
 }
 
-.message--response, .postTitle__link {
+.message--div div {
     align-self: center;
 }
 
+.postTitle__link {
+    align-self: center;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    text-shadow: 0 0 1px darkolivegreen;
+    font-size: 14px;
+    color: darkslategray;
+}
 
-.message--header {
+.postTitle__link:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+
+.message--div h3, .repliedNotice {
     font-weight: bold;
     font-family: 'Just Another Hand', cursive;
     margin-right: 5px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
 }
 
 .replied--true {
     opacity: 70%;
-    width: 85%;
-    margin: 10px;
-    border: 2px solid darkseagreen;
-    border-radius: 4%;
-    box-shadow: 0 0 3px darkolivegreen;
-    padding: 8px;
-    background-color: whitesmoke;
-    display: flex;
-    flex-direction: column;
+}
+
+.inbox h1{
+    font-weight: bold;
+    font-family: 'Just Another Hand', cursive;
+    margin-left: 15px;
+    font-size: 30px;
+    letter-spacing: 2px;
 }
