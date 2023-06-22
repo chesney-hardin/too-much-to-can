@@ -34,3 +34,11 @@
     font-weight: 700;
     color: darkslategray;
 }
+
+.yourposts h1{
+    font-weight: bold;
+    font-family: 'Just Another Hand', cursive;
+    margin-left: 5%;
+    font-size: 38px;
+    letter-spacing: 3px;
+}

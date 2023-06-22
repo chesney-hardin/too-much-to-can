@@ -6,5 +6,11 @@
 }
 
 .about{
-    margin: 30px;
+    width: 75%;
+    margin: auto;
+    border: 2px solid darkseagreen;
+    border-radius: 3%;
+    box-shadow: 0 0 3px darkolivegreen;
+    padding: 15px 25px;
+    background-color: whitesmoke;
 }

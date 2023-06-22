@@ -22,7 +22,7 @@ export const Inbox = () => {
 
     useEffect(
         () => {
-            if (messages.lenght !== 0) {
+            if (messages.length !== 0) {
                 const newestMessagesFirst = messages.sort((a, b) => b.id - a.id)
                 setSortedMessages(newestMessagesFirst)
             }
@@ -48,6 +48,7 @@ export const Inbox = () => {
 
     return <section className="inbox">
         <h1>Your Messages:</h1>
+        <button className="sentMessages__btn" onClick={() => { navigate(`/sentmessages`) }}>Sent Messages</button>
         <article className="messages">
             {
                 sortedMessages.map(message => {

@@ -38,8 +38,6 @@
     background-color: darkred;
     border: 1px solid whitesmoke;
     border-radius: .25rem;
-    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     color: whitesmoke;
     font-family: 'Lato', sans-serif;
     font-size: 14px;

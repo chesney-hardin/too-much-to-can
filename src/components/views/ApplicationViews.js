@@ -11,6 +11,7 @@ import { CreatePost } from "../Posts/CreatePost"
 import { EditProfile } from "../Profile/EditProfile"
 import { ReplyMessage } from "../Messages/ReplyMessage"
 import { AboutPage } from "../AboutPage/AboutPage"
+import { SentMessages } from "../Messages/SentMessages"
 
 export const ApplicationViews = () => {
 	return <>
@@ -29,6 +30,7 @@ export const ApplicationViews = () => {
 				<Route path="profile" element={<ViewProfile />} />
 				<Route path="editprofile/:userId" element={<EditProfile />} />
 				<Route path="inbox" element={<Inbox />} />
+				<Route path="sentmessages" element={<SentMessages />} />
 				<Route path="yourposts" element={<YourPosts/>} />
 				<Route path="editpost/:postId" element={<EditPost/>} />
 				<Route path="createpost" element={<CreatePost />} />
