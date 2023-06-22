@@ -1,0 +1,10 @@
+.about section h2{
+    font-weight: bold;
+    font-family: 'Just Another Hand', cursive;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.about{
+    margin: 30px;
+}

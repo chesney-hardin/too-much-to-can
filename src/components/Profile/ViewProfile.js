@@ -25,33 +25,34 @@ export const ViewProfile = () => {
     )
 
     return <div className="profile-div">
-    <section className="profile">
-        <div className="profile--list">
-            <div className="profile--listItem">
-                <h3 className="profile--header">Name:</h3>
-                <div>{user.name}</div>
+        <h1>Your Profile:</h1>
+        <section className="profile">
+            <div className="profile--list">
+                <div className="profile--listItem">
+                    <h3 className="profile--header">Name:</h3>
+                    <div>{user.name}</div>
+                </div>
+                <div className="profile--listItem">
+                    <h3 className="profile--header">Username: </h3>
+                    <div>{user.username}</div>
+                </div>
+                <div className="profile--listItem">
+                    <h3 className="profile--header">Email: </h3>
+                    <div>{user.email}</div>
+                </div>
+                <div className="profile--listItem">
+                    <h3 className="profile--header">Password: </h3>
+                    <div>{user.password}</div>
+                </div>
+                <div className="profile--listItem">
+                    <h3 className="profile--header">County: </h3>
+                    <div>{user?.county?.name}</div>
+                </div>
             </div>
-            <div className="profile--listItem">
-                <h3 className="profile--header">Username: </h3>
-                <div>{user.username}</div>
-            </div>
-            <div className="profile--listItem">
-                <h3 className="profile--header">Email: </h3>
-                <div>{user.email}</div>
-            </div>
-            <div className="profile--listItem">
-                <h3 className="profile--header">Password: </h3>
-                <div>{user.password}</div>
-            </div>
-            <div className="profile--listItem">
-                <h3 className="profile--header">County: </h3>
-                <div>{user?.county?.name}</div>
-            </div>
-        </div>
-        <img className="editProfileIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.psrgInv2Fjtk6Oj2nGqB_gHaFC%26pid%3DApi&f=1&ipt=43f0ce55ccbf6f8d7559b0331d7c9aa4bf5c3d3689c154f5c08edcf3e003e124&ipo=images" alt="edit post"
-            onClick={() => { navigate(`/editprofile/${currentUser.id}`) }} />
+            <img className="editProfileIcon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.psrgInv2Fjtk6Oj2nGqB_gHaFC%26pid%3DApi&f=1&ipt=43f0ce55ccbf6f8d7559b0331d7c9aa4bf5c3d3689c154f5c08edcf3e003e124&ipo=images" alt="edit post"
+                onClick={() => { navigate(`/editprofile/${currentUser.id}`) }} />
 
-    </section>
+        </section>
     </div>
 
     /* 

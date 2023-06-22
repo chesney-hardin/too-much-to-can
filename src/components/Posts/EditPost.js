@@ -70,7 +70,10 @@ export const EditPost = () => {
             })
     }
 
-    return <form className="editPost">
+    return <section className="editPost-container">
+    <section className="editPost-parent">
+        <h1>Edit Your Post:</h1>
+        <form className="editPost">
 
         <fieldset>
             <div className="editPost-group">
@@ -234,5 +237,6 @@ export const EditPost = () => {
             >Update Post</button>
         </div>
     </form>
-
+</section>
+</section>
 }

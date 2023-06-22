@@ -1,13 +1,14 @@
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import "./NavBar.css"
 import { InboxCount } from "./InboxCount"
-import { useState } from "react"
+import { useRef, useState } from "react"
 
 
 
 export const NavBar = () => {
     const navigate = useNavigate()
     const [isOpen, setIsOpen] = useState(false)
+    const expandTimeoutRef = useRef(null)
 
     let currentUser = JSON.parse(localStorage.getItem("tomato_user"))
 
@@ -16,6 +17,19 @@ export const NavBar = () => {
         console.log(isOpen)
     }
 
+    const handleMouseEnter = () => {
+        clearTimeout(expandTimeoutRef.current);
+        setIsOpen(true);
+    };
+    const handleMouseLeave = () => {
+        expandTimeoutRef.current = setTimeout(() => {
+            setIsOpen(false);
+        }, 300);
+    };
+    const handleLinkClick = () => {
+        setIsOpen(false);
+    };
+
     return (
         <section className="navbar">
             <div className="navbar__item active">
@@ -23,7 +37,9 @@ export const NavBar = () => {
                     onClick={() => { navigate(`/home`) }} />
             </div>
             <div className="title--div"><h1 className="title--main">TOO  MUCH  TO  CAN</h1></div>
-            <div className="dropdown navbar__item active">
+            <div className="dropdown navbar__item active"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}>
                 <div className="dropdown-button" onClick={toggleDropdown}>
                     <div className="bar"></div>
                     <div className="bar"></div>
@@ -32,8 +48,8 @@ export const NavBar = () => {
                 {isOpen 
                     ? ( 
                         <div className="dropdown-content">
-                            <a className="navbar__link active" href="/profile">{currentUser.username}</a>
-                            <a className="navbar__link active" href="/inbox"><InboxCount /></a>
+                            <a className="navbar__link active" href="/profile"  onClick={handleLinkClick}>{currentUser.username}</a>
+                            <a className="navbar__link active" href="/inbox"  onClick={handleLinkClick}><InboxCount /></a>
                             {localStorage.getItem("tomato_user") 
                                 ? (
                                     <a className="navbar__link active" href="" onClick={() => {

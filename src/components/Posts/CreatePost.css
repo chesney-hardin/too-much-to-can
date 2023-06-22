@@ -1,12 +1,11 @@
 .createPost, .editPost{
-    padding: 3rem 6rem;
+    padding: 25px 50px;
     border: 2px solid darkseagreen;
     border-radius: 4%;
     box-shadow: 0 0 3px darkolivegreen;
     background-color: darkslategray;
     color: whitesmoke;
-    margin: auto 5rem 8rem 5rem;
-
+    width: 100%;
 }
 
 .create-post-btn, .update-post-btn {
@@ -50,4 +49,26 @@
     font-family: 'Just Another Hand', cursive;
     letter-spacing: 2px;
     font-size: 20px;
+}
+
+.createPost-parent, .editPost-parent{
+    width: 45rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto auto 20rem auto;
+}
+
+.createPost-parent h1, .editPost-parent h1{
+    align-self: flex-start;
+    font-weight: bold;
+    font-family: 'Just Another Hand', cursive;
+    font-size: 38px;
+    letter-spacing: 3px;
+    width: 75%;
+}
+
+.createPost-container, .editPost-container{
+    display: flex;
+    justify-content: center;
 }
