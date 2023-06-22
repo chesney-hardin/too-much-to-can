@@ -32,7 +32,7 @@
     flex-direction: column;
     margin: 20px;
     height: auto;
-    width: 40rem;
+    width: 70%;
     
 }
 
@@ -40,7 +40,7 @@
 .messages{
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 10px;
     align-items: center;
 }
 
@@ -85,7 +85,12 @@
 .inbox h1{
     font-weight: bold;
     font-family: 'Just Another Hand', cursive;
-    margin-left: 15px;
-    font-size: 30px;
-    letter-spacing: 2px;
+    margin-left: 10%;
+    font-size: 38px;
+    letter-spacing: 3px;
+}
+
+.inbox{
+    display:flex;
+    flex-direction: column;
 }

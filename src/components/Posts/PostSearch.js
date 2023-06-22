@@ -118,7 +118,7 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
                                 setterFunction(changeEvent.target.value)
                             }
                         }
-                        type="text" placeholder="Enter search terms" />
+                        type="text" placeholder="Search keyword" />
 
                     <button className="advancedSearch-btn" onClick={() => { setAdvancedSearch(true) }}>Advanced Search</button>
                 </div>

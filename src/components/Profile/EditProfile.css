@@ -1,5 +1,5 @@
 .editProfileForm{
-    padding: 3rem 6rem;
+    padding: 10px 50px;
     border: 2px solid darkseagreen;
     border-radius: 4%;
     box-shadow: 0 0 3px darkolivegreen;
@@ -20,8 +20,24 @@
     font-size: 25px;
 }
 
-.editProfile-group input{
 
+.editProfile-parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto auto 10rem auto;
+    width: 40rem;
+}
+
+.editProfile-parent h1{
+    align-self: flex-start;
+    font-weight: bold;
+    font-family: 'Just Another Hand', cursive;
+    margin-right: auto;
+    font-size: 38px;
+    letter-spacing: 3px;
+    width: 33rem;
+    margin-left: 2rem;
 }
 
 .editProfile-group select{

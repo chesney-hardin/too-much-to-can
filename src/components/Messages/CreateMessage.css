@@ -1,0 +1,87 @@
+.replyMessage {
+    border: 2px solid darkseagreen;
+    border-radius: 3%;
+    box-shadow: 0 0 3px darkolivegreen;
+    padding: 8px 18px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    height: auto;
+    width: 70%;
+}
+
+.receivedMessage, .messageForm {
+    border: 2px solid darkseagreen;
+    border-radius: 3%;
+    background-color: darkslategray;
+    color: whitesmoke;
+    padding: .5rem 1rem;
+    margin: .5rem 1rem;
+    width: 70%;
+}
+
+.messageForm{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.replyMessage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sendMessage-btn {
+    align-self: flex-end;
+    background-color: darkred;
+    border: 1px solid whitesmoke;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    padding: 7px 15px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.sendMessage-btn:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.replyMessage-parent, .messageForm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+.replyMessage-group label {
+    font-weight: bold;
+    font-family: 'Just Another Hand', cursive;
+    margin-right: 5px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+.postTitle--link {
+    align-self: center;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    text-shadow: 0 0 1px darkred;
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+.messageForm-container h1, .replyMessage-parent h1{
+    align-self: flex-start;
+    font-weight: bold;
+    font-family: 'Just Another Hand', cursive;
+    margin-left: 10%;
+    font-size: 38px;
+    letter-spacing: 3px;
+}

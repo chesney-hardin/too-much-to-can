@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import "./CreateMessage.css"
 
 export const CreateMessage = () => {
     const { postId } = useParams()
@@ -32,7 +33,6 @@ export const CreateMessage = () => {
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
-        // TODO: Create the object to be saved to the API
         const messageToSendToAPI =
         {
             userId: currentUser.id,
@@ -42,7 +42,6 @@ export const CreateMessage = () => {
         }
 
 
-        // TODO: Perform the fetch() to POST the object to the API
         return fetch(`http://localhost:8088/messages`, {
             method: "POST",
             headers: {
@@ -56,75 +55,77 @@ export const CreateMessage = () => {
             })
     }
 
-    return <form className="messageForm">
+    return <section className="messageForm-container">
+        <h1>Send Message:</h1>
+        <form className="messageForm">
 
-        <fieldset>
-            <div className="form-group">
-                <label>To:</label>
-                <textarea
-                    required autoFocus
-                    type="text"
-                    style={{
-                        height: "2rem"
-                    }}
-                    className="form-control"
-                    value={post?.user?.username}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.user.username = evt.target.value
-                            setPost(copy)
-                        }
-                    }>{post?.user?.username}</textarea>
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label>Post Title:</label>
-                <textarea
-                    required autoFocus
-                    type="text"
-                    style={{
-                        height: "2rem"
-                    }}
-                    className="form-control"
-                    value={post?.title}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...post }
-                            copy.title = evt.target.value
-                            setPost(copy)
-                        }
-                    }>{post?.title}</textarea>
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label>Message:</label>
-                <textarea
-                    required autoFocus
-                    type="text"
-                    style={{
-                        height: "10rem"
-                    }}
-                    className="form-control"
-                    placeholder="Reply to post"
-                    value={message?.text}
-                    onChange={
-                        (evt) => {
-                            const copy = { ...message }
-                            copy.text = evt.target.value
-                            setMessage(copy)
-                        }
-                    }></textarea>
-            </div>
-        </fieldset>
-        <button
-            onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-            className="btn btn-primary"
-        >Send</button>
+            <fieldset>
+                <div className="form-group">
+                    <label>To:</label>
+                    <textarea
+                        required autoFocus
+                        type="text"
+                        style={{
+                            height: "2rem"
+                        }}
+                        className="form-control"
+                        value={post?.user?.username}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...post }
+                                copy.user.username = evt.target.value
+                                setPost(copy)
+                            }
+                        }>{post?.user?.username}</textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label>Post Title:</label>
+                    <textarea
+                        required autoFocus
+                        type="text"
+                        style={{
+                            height: "2rem"
+                        }}
+                        className="form-control"
+                        value={post?.title}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...post }
+                                copy.title = evt.target.value
+                                setPost(copy)
+                            }
+                        }>{post?.title}</textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label>Message:</label>
+                    <textarea
+                        required autoFocus
+                        type="text"
+                        style={{
+                            height: "10rem"
+                        }}
+                        className="form-control"
+                        placeholder="Reply to post"
+                        value={message?.text}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...message }
+                                copy.text = evt.target.value
+                                setMessage(copy)
+                            }
+                        }></textarea>
+                </div>
+            </fieldset>
+            <button
+                onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+                className="sendMessage-btn"
+            >Send</button>
 
-    </form>
-
+        </form>
+    </section>
 }
 

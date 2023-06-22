@@ -17,7 +17,7 @@
 }
 
 .profile{
-    margin: 50px;
+    margin: 10px 50px;
     border: 2px solid darkseagreen;
     border-radius: 5%;
     box-shadow: 0 0 3px darkolivegreen;
@@ -30,7 +30,20 @@
 }
 .profile-div{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: auto auto 10rem auto;
+    width: 40rem;
+}
+
+.profile-div h1{
+    align-self: flex-start;
+    font-weight: bold;
+    font-family: 'Just Another Hand', cursive;
+    margin-left: 10%;
+    font-size: 38px;
+    letter-spacing: 3px;
+    margin-left: 2rem;
 }
 
 

@@ -57,6 +57,7 @@
     border-radius: 5%;
     border-top: 3px solid darkred;
     margin-top: 10px;
+    width:8rem;
 }
 
 .navbar__link{

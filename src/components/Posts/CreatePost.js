@@ -58,8 +58,9 @@ export const CreatePost = () => {
             })
     }
 
-    return (
-    <section>
+    return (<section className="createPost-container">
+    <section className="createPost-parent">
+        <h1>Make a New Post:</h1>
         <form className="createPost">
 
             <fieldset>
@@ -226,6 +227,7 @@ export const CreatePost = () => {
         >Create Post</button>
         </div>
         </form>
+    </section>
     </section>
     )
 }

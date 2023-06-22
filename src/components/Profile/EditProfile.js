@@ -57,7 +57,9 @@ export const EditProfile = () => {
     }
 
 
-    return <div className="editProfileForm-div">
+    return <section className="editProfile-parent">
+        <h1>Edit Your Profile:</h1>
+    <div className="editProfileForm-div">
         <form className="editProfileForm">
             <fieldset>
                 <div className="editProfile-group">
@@ -171,5 +173,6 @@ export const EditProfile = () => {
             </fieldset>
         </form>
     </div>
+    </section>
    
 }
