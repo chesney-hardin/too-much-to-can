@@ -64,7 +64,7 @@
     color: darkslategray;
 }
 
-.postTitle__link:hover {
+.postTitle__link:hover, .inbox__btn:hover, .sentMessages__btn:hover {
     cursor: pointer;
     opacity: 70%;
 }
@@ -94,3 +94,17 @@
     display:flex;
     flex-direction: column;
 }
+
+.sentMessages__btn, .inbox__btn{
+    background-color: darkred;
+    border: 1px solid whitesmoke;
+    border-radius: .25rem;
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    padding: 7px 15px;
+    font-weight: 600;
+    width: 10rem;
+    margin-left: 10%;
+}
+

@@ -69,7 +69,8 @@ export const YourPosts = () => {
     }
 
 
-    return <>
+    return <section className="yourposts">
+        <h1>Your Posts:</h1>
         <div className="sortOldest">
             <label>Sort By Oldest</label>
             <input type="checkbox"
@@ -97,5 +98,5 @@ export const YourPosts = () => {
                 })
             }
         </article>
-    </>
+    </section>
 }
