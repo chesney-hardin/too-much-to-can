@@ -44,7 +44,6 @@ export const CreatePost = () => {
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
-        // TODO: Perform the fetch() to POST the object to the API
         return fetch(`http://localhost:8088/posts`, {
             method: "POST",
             headers: {
