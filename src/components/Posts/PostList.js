@@ -38,7 +38,7 @@ export const PostList = ({ searchTermState, advancedSearch, sortByDate }) => {
                 setFilteredPosts(searchedPosts)
             }
         },
-        [searchTermState, advancedSearch]
+        [searchTermState, advancedSearch, sortByDate]
     )
 
 
@@ -52,28 +52,43 @@ export const PostList = ({ searchTermState, advancedSearch, sortByDate }) => {
         },
         []
     )
-
     useEffect(
         () => {
             if (posts.length !== 0) {
                 const nonUsersPosts = posts.filter(post => {
                     return post?.userId !== currentUser.id
                 })
+                    setFilteredPosts(nonUsersPosts)
+                }
+        },
+        [posts]
+    )
+
+
+    useEffect(
+        () => {
+            if (filteredPosts.length !== 0) {
                 if (sortByDate) {
-                    const postsToSort = [...nonUsersPosts].sort((a, b) => {
+                    const postsToSort = [...filteredPosts].sort((a, b) => {
                         const dateA = new Date(a.dateCreated)
                         const dateB = new Date(b.dateCreated)
                         return dateB - dateA;
                     })
                     setFilteredPosts(postsToSort)
                 }
-                else {
-                    setFilteredPosts(nonUsersPosts)
-                }
+            }
+            else {
+                if (posts.length !== 0) {
+                    const nonUsersPosts = posts.filter(post => {
+                        return post?.userId !== currentUser.id
+                    })
+                        setFilteredPosts(nonUsersPosts)
+                    }
             }
         },
-        [posts, sortByDate]
+        [sortByDate]
     )
+
     useEffect(
         () => {
             <PostListJSX filteredPosts={filteredPosts} />

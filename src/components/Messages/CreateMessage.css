@@ -6,8 +6,6 @@
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    height: auto;
     width: 70%;
 }
 
@@ -43,7 +41,7 @@
     font-size: 14px;
     padding: 7px 15px;
     margin-top: 15px;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .sendMessage-btn:hover{
@@ -54,8 +52,9 @@
 .replyMessage-parent, .messageForm-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-bottom: 10rem;
+    height: auto;
+    width: 100%;
 }
 
 .replyMessage-group label {
@@ -76,7 +75,6 @@
 }
 
 .messageForm-container h1, .replyMessage-parent h1{
-    align-self: flex-start;
     font-weight: bold;
     font-family: 'Just Another Hand', cursive;
     margin-left: 10%;
