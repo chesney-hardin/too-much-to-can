@@ -138,7 +138,7 @@ export const EditPost = () => {
             <div className="editPost-group">
                 <label htmlFor="availableTil">Pick up before:</label>
                 <input
-                    required autoFocus
+                    required 
                     type="date"
                     style={{
                         height: "2rem"
@@ -158,7 +158,7 @@ export const EditPost = () => {
             <div className="editPost-group">
                 <label>Date Posted:</label>
                 <input
-                    required autoFocus
+                    required 
                     type="date"
                     style={{
                         height: "2rem"
@@ -178,7 +178,7 @@ export const EditPost = () => {
             <div className="editPost-group">
                 <label>Photo:</label>
                 <input
-                    required autoFocus
+                    required 
                     type="text"
                     style={{
                         height: "2rem"
@@ -214,7 +214,7 @@ export const EditPost = () => {
             <div className="editPost-group">
                 <label>Description:</label>
                 <textarea
-                    required autoFocus
+                    required 
                     style={{
                         height: "5rem"
                     }}

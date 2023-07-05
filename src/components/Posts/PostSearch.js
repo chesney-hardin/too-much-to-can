@@ -60,18 +60,6 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
                     <form className="advancedSearch--form">
                         <fieldset>
                             <div className="advancedSearch--form-group">
-                                <label>Sort By Newest</label>
-                                <input type="checkbox"
-                                    //value={sortDate}
-                                    onChange={
-                                        (evt) => {
-                                            setSortDate(evt.target.checked)
-                                        }
-                                    } />
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <div className="advancedSearch--form-group">
                                 <label>Crop Type:</label>
                                 <select
                                     value={chosenCrop.id}
@@ -103,6 +91,18 @@ export const PostSearch = ({ setterFunction, advancedSearchFunction, setByDate }
                                     )}
 
                                 </select>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div className="advancedSearch--form-group">
+                                <label>Sort By Newest</label>
+                                <input type="checkbox"
+                                    value={sortDate}
+                                    onChange={
+                                        (evt) => {
+                                            setSortDate(evt.target.checked)
+                                        }
+                                    } />
                             </div>
                         </fieldset>
                     </form>

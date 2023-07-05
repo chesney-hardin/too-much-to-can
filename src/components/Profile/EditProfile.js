@@ -86,7 +86,7 @@ export const EditProfile = () => {
                 <div className="editProfile-group">
                     <label>Email:</label>
                     <input
-                        required autoFocus
+                        required
                         type="text"
                         style={{
                             height: "2rem"
@@ -107,8 +107,8 @@ export const EditProfile = () => {
                 <div className="editProfile-group">
                     <label>Password:</label>
                     <input
-                        required autoFocus
-                        type="text"
+                        required
+                        type="password"
                         style={{
                             height: "2rem"
                         }}

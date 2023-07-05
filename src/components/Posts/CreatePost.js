@@ -126,7 +126,7 @@ export const CreatePost = () => {
                 <div className="createPost-group">
                     <label htmlFor="availableTil">Pick up before:</label>
                     <input
-                        required autoFocus
+                        required 
                         type="date"
                         style={{
                             height: "2rem"
@@ -146,7 +146,7 @@ export const CreatePost = () => {
                 <div className="createPost-group">
                     <label htmlFor="dateCreated">Today's Date:</label>
                     <input
-                        required autoFocus
+                        required 
                         type="date"
                         style={{
                             height: "2rem"
@@ -166,7 +166,7 @@ export const CreatePost = () => {
                 <div className="createPost-group">
                     <label>Photo:</label>
                     <input
-                        required autoFocus
+                        required 
                         type="text"
                         style={{
                             height: "2rem"
@@ -201,7 +201,7 @@ export const CreatePost = () => {
                 <div className="createPost-group">
                     <label>Description:</label>
                     <textarea
-                        required autoFocus
+                        required 
                         style={{
                             height: "5rem"
                         }}

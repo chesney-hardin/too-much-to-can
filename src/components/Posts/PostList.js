@@ -47,22 +47,26 @@ export const PostList = ({ searchTermState, advancedSearch, sortByDate }) => {
             fetch("http://localhost:8088/posts")
                 .then(response => response.json())
                 .then((arrayOfPosts) => {
-                    setPosts(arrayOfPosts)
+                    const nonUsersPosts = arrayOfPosts.filter(post => {
+                        return post?.userId !== currentUser.id
+                    })
+                    setPosts(nonUsersPosts)
+                    setFilteredPosts(nonUsersPosts)
                 })
         },
         []
     )
-    useEffect(
+/*     useEffect(
         () => {
             if (posts.length !== 0) {
                 const nonUsersPosts = posts.filter(post => {
                     return post?.userId !== currentUser.id
                 })
-                    setFilteredPosts(nonUsersPosts)
+                    setFilteredPosts()
                 }
         },
         [posts]
-    )
+    ) */
 
 
     useEffect(
