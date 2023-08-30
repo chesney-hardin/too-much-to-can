@@ -62,9 +62,9 @@ Password: <i>strawberry</i>
 
 #### ERD
 
-<iframe width="560" height="315" src='https://dbdiagram.io/embed/64811db9722eb77494978bb6'> </iframe>
+<img width="560" height="315" src='https://dbdiagram.io/embed/64811db9722eb77494978bb6'> </img>
 
 #### WireFrame
 
-<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVMAs-bMY=/?moveToViewport=-2288,-2474,6107,5517&embedId=707275950094" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+<img width="768" height="432" src="https://miro.com/app/live-embed/uXjVMAs-bMY=/?moveToViewport=-2288,-2474,6107,5517&embedId=707275950094" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></img>
 
