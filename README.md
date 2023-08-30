@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Too Much To Can
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Application Overview
 
-## Available Scripts
+Too Much To Can enables home gardeners across Middle Tennessee to connect and trade their surplus harvests. 
 
-In the project directory, you can run:
+### Problem Solved
 
-### `npm start`
+Imagine you’re a home gardener who loves growing tomatoes. By the end of the summer, you’re drowning in tomatoes, sick and tired of preserving them, and no one you know will accept another single tomato from you. On top of that, you didn’t plant any basil this season to enjoy with all your tomatoes! 
+You hear about an app that allows gardeners to trade their surplus harvests. It’s called ‘Too Much To Can’. You decide to sign up and check it out. You log in and start perusing all the posts from other gardeners. There are so many! You narrow them down by entering the keyword ‘basil’. You’re in luck! Another user in Davidson County has created a post for all of their extra basil, and they want to trade for tomatoes! In the description, they say they are looking for 10 pounds of tomatoes. You send them a message to inquire about a trade. 
+Realizing that you have over 80 pounds of tomatoes, you create a new post for the remaining 70 pounds. Since you don’t want any other produce at the moment, you decide to select ‘donate’ instead of ‘trade’. Within minutes, you receive a message from an interested user who wants some of your tomatoes. You reply to arrange a meetup.
+Home gardeners often get excited and grow way more food than they know what to do with! ‘Too Much To Can’’ will allow gardeners across Middle TN to connect and trade their homegrown goodies (or give them away). This app enables users to explore the flavors of backyard gardens in their area and reduce food waste!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Features 
+<ul>
+<li>Users can create posts for their surplus harvests from their home gardens.</li>
+<li>Users can search and filter posts for vegetables, fruits, mushrooms, and other home-grown goodies for trade or for free.</li>
+<li>Users can respond to a post by messaging the user who created the post.</li>
+<li>Users can view, edit, and delete their posts.</li>
+</ul>
 
-### `npm test`
+### Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![HTML5](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![React](https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Git](https://img.shields.io/badge/git%20-%23F05033.svg?&style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github%20-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white) ![JSON Server](https://img.shields.io/badge/JSON_Server%20-%232a2e2a.svg?&style=for-the-badge&logo=JSON&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/VSCode%20-%23007ACC.svg?&style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-### `npm run build`
+## Running This Application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone this repository and change to the directory in the terminal.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+    git clone git@github.com:chesney-hardin/too-much-to-can.git
+    cd too-much-to-can
+```
+2. Access the data.
 
-### `npm run eject`
+<a href="https://https://github.com/chesney-hardin/too-much-to-can-api" target="_blank"><img src="https://img.shields.io/badge/Click_here%20-%236ae689.svg?&style=for-the-badge&&logoColor=white" alt="Too Much To Can Server Repo" style="height: auto !important; width: auto !important;" /></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```sh
+    git clone git@github.com:chesney-hardin/too-much-to-can-api.git
+    cd too-much-to-can-api
+    json-server database.json -p 8088
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Launch the client.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+    npm install
+    npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Demo User Credentials
 
-## Learn More
+#### Warning About Security
+This application uses mock authentication which is purely for demonstration purposes. Therefore the login and registration code written here is completely insecure and would never be implemented in a professional application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p>
+Username: <i>chesneyh@aol.com</i>
+<br>
+Password: <i>strawberry</i>
+</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+#### ERD
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<iframe width="560" height="315" src='https://dbdiagram.io/embed/64811db9722eb77494978bb6'> </iframe>
 
-### Analyzing the Bundle Size
+#### WireFrame
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVMAs-bMY=/?moveToViewport=-2288,-2474,6107,5517&embedId=707275950094" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
