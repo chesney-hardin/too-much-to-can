@@ -50,7 +50,7 @@ Home gardeners often get excited and grow way more food than they know what to d
 
 #### Demo User Credentials
 
-#### Warning About Security
+*** Warning About Security *** </br>
 This application uses mock authentication which is purely for demonstration purposes. Therefore the login and registration code written here is completely insecure and would never be implemented in a professional application.
 
 <p>
