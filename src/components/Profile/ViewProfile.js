@@ -42,7 +42,7 @@ export const ViewProfile = () => {
                 </div>
                 <div className="profile--listItem">
                     <h3 className="profile--header">Password: </h3>
-                    <div>{user.password}</div>
+                    <div>**********</div>
                 </div>
                 <div className="profile--listItem">
                     <h3 className="profile--header">County: </h3>

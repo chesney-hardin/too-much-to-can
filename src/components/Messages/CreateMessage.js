@@ -51,7 +51,7 @@ export const CreateMessage = () => {
         })
             .then(response => response.json())
             .then(() => {
-                navigate("/home")
+                navigate("/posts")
             })
     }
 

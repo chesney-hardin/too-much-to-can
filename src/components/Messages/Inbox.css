@@ -49,6 +49,7 @@
     flex-direction: row;
     align-content: center;
     justify-content: flex-start;
+    margin-bottom: -10px;
 }
 
 .message--div div {
@@ -77,6 +78,7 @@
     font-size: 20px;
     letter-spacing: 1.5px;
 }
+
 
 .replied--true {
     opacity: 70%;
