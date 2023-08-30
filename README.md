@@ -35,8 +35,6 @@ Home gardeners often get excited and grow way more food than they know what to d
 ```
 2. Access the data.
 
-<a href="https://https://github.com/chesney-hardin/too-much-to-can-api" target="_blank"><img src="https://img.shields.io/badge/Click_here%20-%236ae689.svg?&style=for-the-badge&&logoColor=white" alt="Too Much To Can Server Repo" style="height: auto !important; width: auto !important;" /></a>
-
 ```sh
     git clone git@github.com:chesney-hardin/too-much-to-can-api.git
     cd too-much-to-can-api
