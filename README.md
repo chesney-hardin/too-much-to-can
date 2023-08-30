@@ -62,11 +62,11 @@ Password: <i>strawberry</i>
 
 #### ERD
 
-![ERD](https://dbdiagram.io/embed/64811db9722eb77494978bb6)
+![ERD] (src/diagrams/too-much-to-can.png)
 
 
 #### WireFrame
 
-![WireFrame](https://miro.com/app/live-embed/uXjVMAs-bMY=/?moveToViewport=-2288,-2474,6107,5517&embedId=707275950094)
+![WireFrame] (src/diagrams/TMTC-capstone - Frame 1.jpg)
 
 
