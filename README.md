@@ -11,6 +11,15 @@ You hear about an app that allows gardeners to trade their surplus harvests. It�
 Realizing that you have over 80 pounds of tomatoes, you create a new post for the remaining 70 pounds. Since you don’t want any other produce at the moment, you decide to select ‘donate’ instead of ‘trade’. Within minutes, you receive a message from an interested user who wants some of your tomatoes. You reply to arrange a meetup.
 Home gardeners often get excited and grow way more food than they know what to do with! ‘Too Much To Can’’ will allow gardeners across Middle TN to connect and trade their homegrown goodies (or give them away). This app enables users to explore the flavors of backyard gardens in their area and reduce food waste!
 
+#### ERD
+
+<img src="./src/diagrams/too-much-to-can.png" alt="">
+
+
+#### WireFrame
+
+<img src="./src/diagrams/TMTC-capstone - Frame 1.jpg" alt="">
+
 
 ### Features 
 <ul>
@@ -60,14 +69,7 @@ Password: <i>strawberry</i>
 </p>
 
 
-#### ERD
 
-<img src="./src/diagrams/too-much-to-can.png" alt="">
-
-
-#### WireFrame
-
-<img src="./src/diagrams/TMTC-capstone - Frame 1.jpg" alt="">
 
 
 
